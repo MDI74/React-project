@@ -1,0 +1,18 @@
+.header {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    grid-area: header;
+  
+    &__content {
+      min-height: 70px;
+      background-color: green;
+    }
+  
+    &__logo img{
+      width: 50px;;
+    }
+  
+  }
+  
