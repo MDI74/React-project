@@ -6,12 +6,21 @@
     grid-area: header;
   
     &__content {
+      display: flex;
       min-height: 70px;
       background-color: green;
+      align-items: center;
     }
   
     &__logo img{
-      width: 50px;;
+      width: 60px;
+      padding: 0px 5px;
+    }
+
+    &__title{
+      margin-left: 10px;
+      color: #FFFFFF;
+      font-size: 24px;
     }
   
   }

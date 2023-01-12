@@ -1,0 +1,21 @@
+.list-post {
+   
+    &__body{
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        background: #ffa500;
+        border-radius: 50%;
+    }
+
+    &__message{
+        margin-left: 15px;
+        font-weight: 14px;
+        color: #FFFFFF;
+    }
+}

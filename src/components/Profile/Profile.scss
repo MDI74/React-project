@@ -1,0 +1,34 @@
+.profile{
+    grid-area: profile;
+    background-color: rgb(108, 151, 151);
+
+    &__content {
+        display: flex;
+        flex-direction:column;
+        padding: 0px 10px;
+
+    }
+
+    &__background {
+        margin: 20px 0px;
+        height: 200px;
+        
+
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    &__item{
+        display: flex;
+        align-items: center;
+        padding-bottom: 25px;
+    }
+
+    &__avatar{
+        max-width: 150px;
+        margin-right: 15px;
+    }
+}

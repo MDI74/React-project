@@ -8,19 +8,19 @@ const Navigation = () =>{
           <div className='nav__content'>
             <ul className='nav__list'>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>Profile</a>
+                <a href='#' className='nav__link'>Профиль</a>
               </li>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>Messages</a>
+                <a href='#' className='nav__link'>Сообщения</a>
               </li>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>News</a>
+                <a href='#' className='nav__link'>Новости</a>
               </li>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>Music</a>
+                <a href='#' className='nav__link'>Музыка</a>
               </li>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>Settings</a>
+                <a href='#' className='nav__link'>Настройки</a>
               </li>
             </ul>
           </div>

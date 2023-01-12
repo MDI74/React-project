@@ -1,0 +1,33 @@
+.nav {
+    grid-area: nav;
+    background-color: rgb(126, 124, 156);
+   
+    &__content {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0px 0px 35px;
+    }
+
+    &__list {
+
+      & > *:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+
+    &__link {
+      font-size: 18px;
+      color: #FFFFFF;
+      transition: all 0.2s ease-in;
+      
+      &:hover{
+        transition: all 0.1s ease-in;
+        border-bottom: 2px solid #dddada ;
+        color: #dddada;
+      }
+    }
+
+
+}
+  

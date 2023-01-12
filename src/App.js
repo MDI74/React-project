@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Profile from './components/Profile';
+import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
+import Profile from './components/Profile/Profile';
 
 const App = () => {
   return (
