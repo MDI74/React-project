@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navigation.scss'
 
 const Navigation = () =>{
@@ -8,19 +9,19 @@ const Navigation = () =>{
           <div className='nav__content'>
             <ul className='nav__list'>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>Профиль</a>
+                <Link to='/profile' className='nav__link'>Профиль</Link>
               </li>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>Сообщения</a>
+                <Link to='/dialogs' className='nav__link'>Сообщения</Link>
               </li>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>Новости</a>
+                <Link to='/news' className='nav__link'>Новости</Link>
               </li>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>Музыка</a>
+                <Link to='/music' className='nav__link'>Музыка</Link>
               </li>
               <li className='nav__item'>
-                <a href='#' className='nav__link'>Настройки</a>
+                <Link to='/settings' className='nav__link'>Настройки</Link>
               </li>
             </ul>
           </div>
