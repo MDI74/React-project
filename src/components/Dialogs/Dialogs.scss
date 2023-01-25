@@ -1,1 +1,76 @@
 @import "../../base/variables";
+
+.dialogs {
+
+  &__content{
+    display: flex;
+    position: relative;
+
+    &::after{
+      content: '';
+      display: block;
+      position: relative;
+      right: 70%;
+      border-right: 2px solid rgb(102, 148, 180);
+      height: 100vh;
+    }
+  }
+
+  &__items{
+      display: flex;
+      flex-direction: column;
+      padding: 15px 0 0 0;
+      flex: 1 0 30%;
+  }
+
+  &__messages{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 70%;
+    padding: 15px 0 0 0;
+  }
+}
+
+.item-dialog{
+
+  &__content{
+    padding: 20px 5px;
+
+    & > *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px;
+
+    background-color: rgba(80, 170, 213, 0.7);
+  }
+
+  &__name{
+    font-weight: 500;
+  }
+}
+
+.message-item{
+
+  &__content{
+    padding: 15px 0 0 15px;
+  }
+  &__body{
+    padding: 5px;
+    max-width: 200px;
+    background-color: rgb(135, 148, 148);
+  }
+}
+
+.title-dialog{
+  width: 100%;
+  padding: 0 0 5px 0;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 2px solid rgb(102, 148, 180);
+}
