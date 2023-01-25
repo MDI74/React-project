@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navigation.scss'
 
 const Navigation = () =>{
@@ -9,19 +9,19 @@ const Navigation = () =>{
           <div className="nav__content">
             <ul className="nav__list">
               <li className="nav__item">
-                <Link to="/profile" className="nav__link">Профиль</Link>
+                <NavLink to="/profile" className="nav__link">Профиль</NavLink>
               </li>
               <li className="nav__item">
-                <Link to="/dialogs" className="nav__link">Сообщения</Link>
+                <NavLink to="/dialogs" className="nav__link">Сообщения</NavLink>
               </li>
               <li className="nav__item">
-                <Link to="/news" className="nav__link">Новости</Link>
+                <NavLink to="/news" className="nav__link">Новости</NavLink>
               </li>
               <li className="nav__item">
-                <Link to="/music" className="nav__link">Музыка</Link>
+                <NavLink to="/music" className="nav__link">Музыка</NavLink>
               </li>
               <li className="nav__item">
-                <Link to="/settings" className="nav__link">Настройки</Link>
+                <NavLink to="/settings" className="nav__link">Настройки</NavLink>
               </li>
             </ul>
           </div>

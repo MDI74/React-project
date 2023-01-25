@@ -9,13 +9,13 @@
     &__icon {
         width: 20px;
         height: 20px;
-        background: #ffa500;
+        background: rgb(255, 165, 0);
         border-radius: 50%;
     }
 
     &__message{
         margin-left: 15px;
-        font-weight: 14px;
-        color: #FFFFFF;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
     }
 }

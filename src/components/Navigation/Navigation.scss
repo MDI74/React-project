@@ -1,11 +1,11 @@
 .nav {
     grid-area: nav;
     background-color: rgb(126, 124, 156);
-   
+
     &__content {
       display: flex;
       flex-direction: column;
-      padding: 10px 0px 0px 35px;
+      padding: 10px 0 0 35px;
     }
 
     &__list {
@@ -15,19 +15,20 @@
       }
     }
 
-
     &__link {
       font-size: 18px;
-      color: #FFFFFF;
+      color: rgb(255, 255, 255);
       transition: all 0.2s ease-in;
-      
+
+      &.active{
+        color: rgb(32, 46, 73);
+      }
+
       &:hover{
         transition: all 0.1s ease-in;
-        border-bottom: 2px solid #dddada ;
-        color: #dddada;
+        border-bottom: 2px solid rgb(221, 218, 218);
+        color: rgb(221, 218, 218);
       }
-    }
-
-
+   }
 }
   
