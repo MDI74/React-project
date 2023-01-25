@@ -1,4 +1,4 @@
-@import "../../base/variables";
+@import '../../base/variables';
 
 .profile{
 
@@ -17,16 +17,5 @@
             height: 100%;
             object-fit: cover;
         }
-    }
-    
-    &__item{
-        display: flex;
-        align-items: center;
-        padding-bottom: 25px;
-    }
-
-    &__avatar{
-        max-width: 150px;
-        margin-right: 15px;
     }
 }

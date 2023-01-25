@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import './MyPosts.scss'
-import Post from './Post/Post';
+import Post from './Post/Post'
 
 const MyPosts= () => {
     return (
@@ -22,5 +22,4 @@ const MyPosts= () => {
       </div>
     )
 }
-
 export default MyPosts;

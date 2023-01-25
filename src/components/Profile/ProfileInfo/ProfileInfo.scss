@@ -1,0 +1,15 @@
+@import '../../../base/variables';
+
+.profile {
+
+    &__item {
+      display: flex;
+      align-items: center;
+      padding-bottom: 25px;
+    }
+
+    &__avatar {
+      max-width: 150px;
+      margin-right: 15px;
+    }
+}

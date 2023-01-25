@@ -1,4 +1,4 @@
-@import "../../../base/variables";
+@import '../../../../base/variables';
 
 .list-post {
    
@@ -18,6 +18,6 @@
     &__message{
         margin-left: 15px;
         font-size: 14px;
-        color: $first-color;
+        color: rgb(0, 0, 0);
     }
 }

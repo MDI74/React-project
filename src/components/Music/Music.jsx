@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './Music.scss'
 
 const Music = (props) => {

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import './Dialogs.scss'
-import {NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom"
 
 const DialogItem = (props) => {
     let path ="/dialogs/" + props.id

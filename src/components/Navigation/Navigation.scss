@@ -1,4 +1,4 @@
-@import "../../base/variables";
+@import '../../base/variables';
 
 .nav {
     grid-area: nav;
@@ -10,31 +10,11 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      padding: 10px 10px;
-    }
 
-    &__list {
-
+      padding: 30px 10px;
       & > *:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
     }
-
-    &__link {
-      font-size: 18px;
-      color: $first-color;
-      transition: all 0.2s ease-in;
-
-      &.active{
-        color: rgb(0, 0, 0);
-      }
-
-      &:hover{
-        transition: all 0.1s ease-in;
-        border-bottom: 2px solid rgb(221, 218, 218);
-        color: rgb(221, 218, 218);
-      }
-   }
 }
   
