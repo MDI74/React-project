@@ -3,7 +3,7 @@ import './Settings.scss'
 
 const Settings = (props) => {
     return (
-        <section className='settings'>
+        <section className="settings">
             <div className="settings__container">
                 <div className="settings__content">
                 Settings

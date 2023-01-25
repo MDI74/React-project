@@ -4,11 +4,11 @@ import './Profile.scss'
 
 const Profile = () => {
     return (
-      <section className='profile'>
-        <div className='profile__container'>
+      <section className="profile">
+        <div className="profile__container">
           <div className="profile__content">
-            <div className='profile__background'>
-              <img src='https://puzzleit.ru/files/puzzles/203/202512/_original.jpg' />
+            <div className="profile__background">
+              <img src="https://puzzleit.ru/files/puzzles/203/202512/_original.jpg" />
             </div>
             <div className="profile__item">
               <div className="profile__avatar">

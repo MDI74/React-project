@@ -3,7 +3,7 @@ import './News.scss'
 
 const News = (props) => {
     return (
-        <section className='news'>
+        <section className="news">
             <div className="news__container">
                 <div className="news__content">
                 News

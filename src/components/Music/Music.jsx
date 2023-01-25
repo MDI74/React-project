@@ -3,7 +3,7 @@ import './Music.scss'
 
 const Music = (props) => {
     return (
-        <section className='music'>
+        <section className="music">
             <div className="music__container">
                 <div className="music__content">
                 Music
