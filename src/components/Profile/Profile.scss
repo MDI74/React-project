@@ -1,16 +1,16 @@
+@import "../../base/variables";
+
 .profile{
 
     &__content {
         display: flex;
         flex-direction:column;
         padding: 0 10px;
-
     }
 
     &__background {
         margin: 20px 0;
         height: 200px;
-        
 
         & img{
             width: 100%;

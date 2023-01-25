@@ -1,6 +1,10 @@
+@import "../../base/variables";
+
 .nav {
     grid-area: nav;
     background-color: rgb(126, 124, 156);
+    min-height: 600px;
+    max-height: 800px;
 
     &__content {
       display: flex;
@@ -19,7 +23,7 @@
 
     &__link {
       font-size: 18px;
-      color: rgb(255, 255, 255);
+      color: $first-color;
       transition: all 0.2s ease-in;
 
       &.active{
