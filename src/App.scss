@@ -1,3 +1,5 @@
+@import "base/variables";
+
 .wrapper{
   margin: 0 auto;
   max-width: 1455px;
@@ -14,5 +16,5 @@
 
 .main {
     grid-area: main;
-    background-color: rgb(225, 223, 223);
+    background-color: $first-color;
 }

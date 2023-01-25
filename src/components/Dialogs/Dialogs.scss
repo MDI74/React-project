@@ -34,7 +34,7 @@
 .item-dialog{
 
   &__content{
-    padding: 20px 5px;
+    padding: 5px 5px;
 
     & > *:not(:last-child) {
       margin-bottom: 10px;
@@ -51,6 +51,7 @@
   }
 
   &__name{
+    color: rgb(29, 29, 28);
     font-weight: 500;
   }
 }
