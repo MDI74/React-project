@@ -1,4 +1,4 @@
-@import "../../base/variables";
+@import '../../base/variables';
 
 .dialogs {
 
@@ -29,49 +29,4 @@
     flex: 1 0 70%;
     padding: 15px 0 0 0;
   }
-}
-
-.item-dialog{
-
-  &__content{
-    padding: 5px 5px;
-
-    & > *:not(:last-child) {
-      margin-bottom: 10px;
-    }
-  }
-
-  &__body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 15px;
-
-    background-color: rgba(80, 170, 213, 0.7);
-  }
-
-  &__name{
-    color: rgb(29, 29, 28);
-    font-weight: 500;
-  }
-}
-
-.message-item{
-
-  &__content{
-    padding: 15px 0 0 15px;
-  }
-  &__body{
-    padding: 5px;
-    max-width: 200px;
-    background-color: rgb(135, 148, 148);
-  }
-}
-
-.title-dialog{
-  width: 100%;
-  padding: 0 0 5px 0;
-  text-align: center;
-  font-weight: 700;
-  border-bottom: 2px solid rgb(102, 148, 180);
 }

@@ -1,0 +1,26 @@
+@import "../../../base/variables";
+
+.item-dialog{
+
+  &__content{
+    padding: 5px 5px;
+
+    & > *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 15px;
+
+    background-color: rgba(80, 170, 213, 0.7);
+  }
+
+  &__name{
+    color: rgb(29, 29, 28);
+    font-weight: 500;
+  }
+}
