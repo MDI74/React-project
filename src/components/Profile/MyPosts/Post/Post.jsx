@@ -3,10 +3,11 @@ import './Post.scss'
 
 const Post= (props) => {
     return (
-        <div className="list-post__body">
-            <div className="list-post__icon">
+        <div className="board-post__body">
+            <div className="board-post__icon">
+                <span></span>
             </div>
-            <div className="list-post__message">
+            <div className="board-post__message">
                 <p>{props.message}</p>
             </div>
         </div>
