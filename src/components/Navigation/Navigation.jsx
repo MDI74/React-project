@@ -2,7 +2,7 @@ import React from 'react'
 import './Navigation.scss'
 import NavigationItem from './NavigationItem/NavigationItem'
 
-const Navigation = () =>{
+const Navigation = (props) =>{
     return(
       <nav className="nav">
         <div className="nav__container">

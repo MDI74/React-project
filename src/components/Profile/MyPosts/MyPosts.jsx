@@ -1,16 +1,10 @@
 import React from 'react'
 import './MyPosts.scss'
 import Post from './Post/Post'
-import DialogItem from "../../Dialogs/DialogItem/DialogItem";
 
-const MyPosts= () => {
+const MyPosts= (props) => {
 
-    let postData =[
-        {id:1, message:'hello', likescount:12},
-        {id:2, message:'ko', likescount:4},
-        {id:3, message:'second', likescount:11},
-    ]
-    let postsElement = postData.map(post => <Post id={post.id} message={post.message} likes={post.likescount} />);
+    let postsElement = props.postData.map(post => <Post id={post.id} message={post.message} likes={post.likescount} />);
 
     return (
       <div className="post">
