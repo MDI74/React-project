@@ -12,11 +12,15 @@
 
   &__body{
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 15px 15px;
-
+    padding: 10px 10px;
     background-color: rgba(80, 170, 213, 0.7);
+  }
+
+  &__image img{
+    max-width: 40px;
+    margin: 0 15px 0 0;
+    border-radius: 50%;
   }
 
   &__name{

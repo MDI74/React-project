@@ -5,7 +5,7 @@ import Message from './Message/Message'
 
 const Dialogs = (props) => {
 
-    let dialogsElement= props.state.dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name} />);
+    let dialogsElement= props.state.dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name} avatar={dialog.avatar} />);
     let messagesElement = props.state.messagesData.map(message => <Message id={message.id} message={message.message} />);
 
     return (
