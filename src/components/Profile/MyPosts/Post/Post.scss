@@ -7,7 +7,9 @@
         align-items: center;
         padding-top: 20px;
     }
+
     &__icon {
+
         & span{
             display: block;
             width: 20px;
@@ -16,6 +18,7 @@
             border-radius: 50%;
         }
     }
+
     &__message{
         margin-left: 15px;
         font-size: 14px;

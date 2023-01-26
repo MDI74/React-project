@@ -2,15 +2,16 @@
 
 .message-item{
 
-  &__content{
-    padding: 15px 0 0 15px;
-  }
-  &__body{
-    padding: 5px;
-    max-width: 200px;
-    width: 100%;
-    background-color: rgb(135, 148, 148);
-  }
+    &__content{
+      padding: 15px 0 0 15px;
+    }
+
+    &__body{
+      padding: 5px;
+      max-width: 200px;
+      width: 100%;
+      background-color: rgb(135, 148, 148);
+    }
 }
 
 .title-dialog{

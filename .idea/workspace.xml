@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f23596ef-7e87-4e36-8865-0337e56dd4a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Friends/Friend/Friend.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Friends/Friend/Friend.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Friends/Friends.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Friends/Friends.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/State.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/State.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Friends/Friend/Friend.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Friends/Friend/Friend.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Friends/Friends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Friends/Friends.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItem/NavigationItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItem/NavigationItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/NavigationItem/NavigationItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/NavigationItem/NavigationItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/Post/Post.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,21 +44,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/myakotindi/Documents/GitHub/React-project/src/components/Navigation/Friends/Friend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/myakotindi/Documents/GitHub/React-project/src/components/Navigation/Friends/Friend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\myakotindi\Documents\GitHub\React-project\src\components\Navigation\Friends\Friend" />
@@ -84,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674617450061</updated>
       <workItem from="1674617451313" duration="23168000" />
-      <workItem from="1674704202762" duration="18155000" />
+      <workItem from="1674704202762" duration="18730000" />
     </task>
     <servers />
   </component>
