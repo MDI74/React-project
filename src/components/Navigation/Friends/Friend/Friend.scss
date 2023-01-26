@@ -1,0 +1,20 @@
+@import '../../../../base/variables';
+
+.info-friend{
+
+    &__body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px 10px;
+    }
+
+    &__avatar img{
+      max-width: 50px;
+      border-radius: 50%;
+    }
+
+    &__name{
+      color: rgb(0, 0, 0);
+    }
+}

@@ -10,8 +10,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
       padding: 30px 10px;
+
       & > *:not(:last-child) {
         margin-bottom: 15px;
       }

@@ -1,0 +1,25 @@
+@import '../../../base/variables';
+
+.friends {
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    &__title{
+      font-size: 18px;
+      color: $first-color;
+    }
+    &__info{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+
+
+}
+  
