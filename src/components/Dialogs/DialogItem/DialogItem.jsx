@@ -3,6 +3,7 @@ import './DialogItem.scss'
 import React from 'react'
 
 const DialogItem = (props) => {
+
     let path ="/dialogs/" + props.id
 
     return (
