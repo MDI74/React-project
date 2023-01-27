@@ -2,6 +2,7 @@
 
 .dialogs {
   border-right: 2px solid rgb(0, 0, 0);
+
   &__content{
     display: flex;
   }
@@ -23,8 +24,21 @@
 }
 
 .message-item{
+
   &__content{
-    padding: 0 15px;
-    min-height: 82vh;
+    padding: 0 0 5px 15px;
+    overflow-y: scroll ;
+    max-height: 800px;
+    height: 790px;
+  }
+}
+
+.item-dialog{
+
+  &__content{
+    overflow-y: scroll;
+    max-height: 800px;
+    height: 800px;
+
   }
 }

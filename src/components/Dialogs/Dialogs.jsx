@@ -13,9 +13,12 @@ const Dialogs = (props) => {
         <section className="dialogs">
             <div className="dialogs__container">
                 <div className="dialogs__content">
+
                     <div className="dialogs__items item-dialog">
                         <h4 className="item-dialog__title title-dialog">Диалоги</h4>
-                        {dialogsElement}
+                        <div className="item-dialog__content">
+                            {dialogsElement}
+                        </div>
                     </div>
                     <div className="dialogs__messages message-item">
                         <h4 className="message-item__title title-dialog">Чат</h4>
