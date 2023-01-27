@@ -2,6 +2,7 @@ import React from 'react'
 import './Dialogs.scss'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
+import FormMessage from "./FormMessage/FormMessage";
 
 const Dialogs = (props) => {
 
@@ -18,7 +19,10 @@ const Dialogs = (props) => {
                     </div>
                     <div className="dialogs__messages message-item">
                         <h4 className="message-item__title title-dialog">Чат</h4>
-                        {messagesElement}
+                        <div className="message-item__content">
+                            {messagesElement}
+                        </div>
+                        <FormMessage />
                     </div>
                 </div>
             </div>

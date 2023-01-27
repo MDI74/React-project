@@ -1,15 +1,14 @@
 @import '../../base/variables';
 
 .profile{
-
+    padding: 0 0 0 15px;
     &__content {
         display: flex;
         flex-direction:column;
-        padding: 0 10px;
     }
 
     &__background {
-        margin: 20px 0;
+        margin: 10px 0;
         height: 200px;
 
         & img{

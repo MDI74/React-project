@@ -2,8 +2,8 @@
 
 .wrapper{
   margin: 0 auto;
-  max-width: 1455px;
-  padding: 0 15px;
+  max-width: 1440px;
+
   display: grid;
 
   grid-template-areas:
@@ -11,10 +11,10 @@
   "nav main";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
 }
 
 .main {
+    padding: 10px 0;
     grid-area: main;
     background-color: $first-color;
 }

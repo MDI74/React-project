@@ -1,19 +1,9 @@
 @import '../../base/variables';
 
 .dialogs {
-
+  border-right: 2px solid rgb(0, 0, 0);
   &__content{
     display: flex;
-    position: relative;
-
-    &::after{
-      content: '';
-      display: block;
-      position: relative;
-      right: 80%;
-      border-right: 2px solid rgb(102, 148, 180);
-      height: 100vh;
-    }
   }
 
   &__items{
@@ -21,6 +11,7 @@
       flex-direction: column;
       padding: 15px 0 0 0;
       flex: 1 0 20%;
+      border-right: 2px solid rgb(0, 0, 0);
   }
 
   &__messages{
@@ -28,5 +19,12 @@
     flex-direction: column;
     flex: 1 0 80%;
     padding: 15px 0 0 0;
+  }
+}
+
+.message-item{
+  &__content{
+    padding: 0 15px;
+    min-height: 82vh;
   }
 }

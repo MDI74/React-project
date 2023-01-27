@@ -20,23 +20,4 @@
             outline: none;
         }
     }
-
-    &__button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 24px;
-        background-color: rgb(3, 3, 5);
-        color: $first-color;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 150%;
-        padding: 5px 15px;
-        transition: all 0.2s ease-in 0s;
-        margin-left: auto;
-    
-        &:hover{
-            background-color: rgb(87, 87, 87);
-        }
-    }
 }

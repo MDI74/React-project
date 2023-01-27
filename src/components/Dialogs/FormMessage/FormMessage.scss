@@ -1,0 +1,20 @@
+@import "../../../base/variables";
+
+.form-message{
+  display: flex;
+  padding: 0 15px;
+
+  &__input{
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    min-height: 50px;
+    border: 2px solid #1d1d1c;
+    resize: none;
+    padding: 5px;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+}
