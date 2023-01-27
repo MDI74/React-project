@@ -27,7 +27,13 @@ let state ={
             {id:4,name:'Andrew',avatar:'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg'}
         ]
     }
+}
 
+export const addPost = (postMessage) =>{
+    //Обращаемся к значению ссылки
+    // let text = newPostElement.current.value;
+    console.log(postMessage);
+    // return alert(text);
 }
 
 export default state;
