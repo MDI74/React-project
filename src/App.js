@@ -15,7 +15,7 @@ const App = (props) => {
       <div className="wrapper">
         <Header />
         <Navigation state = {props.state.navigation} />
-        <main className="main">
+        <main className="main ">
           <Routes>
             <Route path="profile/*" element ={<Profile state={props.state.profile} />}/>
             <Route path="dialogs/*" element ={<Dialogs state={props.state.dialogs} />}/>

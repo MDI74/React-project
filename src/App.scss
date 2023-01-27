@@ -1,11 +1,9 @@
 @import "base/variables";
 
 .wrapper{
-  margin: 0 auto;
-  max-width: 1440px;
-
   display: grid;
-
+  max-width: 1440px;
+  margin: 0 auto;
   grid-template-areas:
   "header header"
   "nav main";
@@ -17,4 +15,9 @@
     padding: 10px 0;
     grid-area: main;
     background-color: $first-color;
+}
+
+._container{
+  max-width: 1440px;
+  margin: 0 auto;
 }
