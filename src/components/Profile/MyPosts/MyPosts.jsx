@@ -2,6 +2,7 @@ import React from 'react'
 import './MyPosts.scss'
 import Post from './Post/Post'
 import './../../Button/Buttons.scss'
+
 const MyPosts= (props) => {
 
     let postsElement = props.postData.map(post => <Post id={post.id} message={post.message} likes={post.likescount} />);
@@ -13,7 +14,7 @@ const MyPosts= (props) => {
         //Обращаемся к значению ссылки
         let text = newPostElement.current.value;
 
-        return alert(text);
+        return props.addPost(text);
     }
 
     return (
