@@ -4,6 +4,7 @@
   display: grid;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 5px;
   grid-template-areas:
   "header header"
   "nav main";
@@ -19,4 +20,13 @@
 ._container{
   max-width: 1440px;
   margin: 0 auto;
+}
+*::-webkit-scrollbar{
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $first-color;
+  border-radius: 2em;
+
 }
