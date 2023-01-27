@@ -1,12 +1,12 @@
 @import "../../base/variables";
 
 .header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     grid-area: header;
-    background-color: rgb(0, 128, 0);
+    background-color: $first-color;
   
     &__content {
       display: flex;
@@ -21,7 +21,8 @@
 
     &__title{
       margin-left: 10px;
-      color: $first-color;
+      font-weight: 700;
+      color: $second-color;
       font-size: 24px;
     }
 }

@@ -21,9 +21,9 @@ const MyPosts= (props) => {
       <div className="post">
         <div className="post__container">
           <div className="post__content">
-            <h4 className="post__title title-post">Написать пост:</h4>
             <form action="" method="post" className="post__form">
-                <textarea className="post__input" ref={newPostElement}></textarea>
+                <label for="post" className="post__title title-post">Написать пост:</label>
+                <textarea className="post__input" id="post" ref={newPostElement}></textarea>
                 <button className="post__button button-form" onClick={addPost}>Добавить пост</button>
             </form>
             <div className="post__board board-post">

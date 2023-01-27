@@ -3,7 +3,8 @@
 .nav {
 
     &__link {
-      font-size: 18px;
+      font-size: 16px;
+      font-weight: 700;
       color: $first-color;
       transition: all 0.2s ease-in;
 
@@ -13,8 +14,7 @@
 
       &:hover{
         transition: all 0.1s ease-in;
-        border-bottom: 2px solid rgb(221, 218, 218);
-        color: rgb(221, 218, 218);
+        color: $second-color;
       }
    }
 }

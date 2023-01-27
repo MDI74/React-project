@@ -13,7 +13,6 @@ const Dialogs = (props) => {
         <section className="dialogs">
             <div className="dialogs__container">
                 <div className="dialogs__content">
-
                     <div className="dialogs__items item-dialog">
                         <h4 className="item-dialog__title title-dialog">Диалоги</h4>
                         <div className="item-dialog__content">

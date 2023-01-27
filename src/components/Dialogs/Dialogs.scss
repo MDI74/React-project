@@ -1,7 +1,6 @@
 @import '../../base/variables';
 
 .dialogs {
-  border-right: 2px solid rgb(0, 0, 0);
 
   &__content{
     display: flex;
@@ -10,26 +9,28 @@
   &__items{
       display: flex;
       flex-direction: column;
-      padding: 15px 0 0 0;
       flex: 1 0 20%;
-      border-right: 2px solid rgb(0, 0, 0);
+      margin: 0 10px;
+      border-radius: 10px;
   }
 
   &__messages{
     display: flex;
     flex-direction: column;
     flex: 1 0 80%;
-    padding: 15px 0 0 0;
   }
 }
 
 .message-item{
+  border-radius: 10px 10px 0 0;
+  background-color: $second-color;
 
   &__content{
+    background-color: $second-color;
     padding: 0 0 5px 15px;
     overflow-y: scroll ;
     max-height: 800px;
-    height: 790px;
+    height: 780px;
   }
 }
 
@@ -37,8 +38,18 @@
 
   &__content{
     overflow-y: scroll;
-    max-height: 800px;
-    height: 800px;
-
+    max-height: 850px;
+    height: 840px;
   }
+}
+
+.title-dialog{
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  background-color: $second-color;
+  padding: 15px;
+  color: #3a3636;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 2px solid $first-color;
 }
