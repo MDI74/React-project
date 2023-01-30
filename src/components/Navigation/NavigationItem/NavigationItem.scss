@@ -3,7 +3,7 @@
 .nav {
 
     &__link {
-      font-size: 16px;
+      font-size: $main-font-size;
       font-weight: 700;
       color: $first-color;
       transition: all 0.2s ease-in;

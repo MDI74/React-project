@@ -10,7 +10,8 @@
     }
 
     &__title{
-      font-size: 18px;
+      font-weight: 700;
+      font-size: $main-font-size;
       color: $first-color;
     }
     &__info{
