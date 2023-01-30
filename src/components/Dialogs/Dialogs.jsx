@@ -24,7 +24,7 @@ const Dialogs = (props) => {
                         <div className="message-item__content">
                             {messagesElement}
                         </div>
-                        <FormMessage />
+                        <FormMessage addMessage={props.addMessage} newMessageText={props.state.newMessageText} updateNewMessageText={props.updateNewMessageText}/>
                     </div>
                 </div>
             </div>
