@@ -26,6 +26,8 @@
   background-color: $second-color;
 
   &__content{
+    display: flex;
+    flex-direction: column;
     background-color: $second-color;
     padding: 0 0 5px 15px;
     overflow-y: scroll ;
@@ -40,7 +42,6 @@
     overflow-y: scroll;
     max-height: 850px;
     height: 840px;
-
   }
 }
 
@@ -50,7 +51,7 @@
   font-weight: 700;
   background-color: $second-color;
   padding: 15px;
-  color: #3a3636;
+  color: rgb(58, 54, 54);
   border-radius: 10px 10px 0 0;
   border-bottom: 2px solid $first-color;
 }

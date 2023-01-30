@@ -7,7 +7,7 @@ const Friends = (props) =>{
     let friendElement= props.friendsData.map(friend => <Friend id={friend.id} name={friend.name} avatar={friend.avatar} />);
 
     return(
-      <nav className="friends">
+      <div className="friends">
         <div className="friends__container">
             <div className="friends__content">
                 <h4 className="friends__title">Друзья</h4>
@@ -16,7 +16,7 @@ const Friends = (props) =>{
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
     )
 }
 export default Friends;

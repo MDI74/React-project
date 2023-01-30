@@ -3,11 +3,19 @@
 .message-item{
 
     &__body{
-      margin: 15px 0;
-      padding: 5px;
-      max-width: 200px;
-      width: 100%;
-      background-color: rgb(135, 148, 148);
+      margin: 5px 0;
+    }
+
+    &__text{
+      display: inline-block;
+      border-radius: 5px;
+      padding: 7px;
+      max-width: 50%;
+      line-height: 1.45;
+      background-color: rgb(220, 219, 219);
+      word-wrap: break-word;
 
     }
 }
+
+

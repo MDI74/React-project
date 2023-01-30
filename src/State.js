@@ -44,7 +44,7 @@ let state ={
 
         ],
         messagesData:[
-            {id:1, message:'hi'},
+            {id:1, message:'Hello, how are you?'},
             {id:2, message:'efw'},
             {id:3, message:'gtrg'},
             {id:3, message:'gtrg'},
