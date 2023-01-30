@@ -9,7 +9,6 @@ import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 import Dialogs from "./components/Dialogs/Dialogs"
 
-
 const App = (props) => {
   return (
     <BrowserRouter>
