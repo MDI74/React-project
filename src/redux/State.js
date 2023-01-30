@@ -1,5 +1,4 @@
 import {rerenderEntireTree} from "../render";
-import dialogs from "../components/Dialogs/Dialogs";
 
 let state ={
     profile:{

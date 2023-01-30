@@ -5,22 +5,15 @@
     &__body{
         display: flex;
         align-items: center;
-        padding-top: 20px;
-    }
-
-    &__icon {
-
-        & span{
-            display: block;
-            width: 20px;
-            height: 20px;
-            background: rgb(255, 165, 0);
-            border-radius: 50%;
-        }
+        max-height: 500px;
+        overflow-y: scroll;
+        margin: 8px 0;
+        background-color: #dbdada;
+        border-radius: 5px;
     }
 
     &__message{
-        margin-left: 15px;
+        padding: 10px 15px;
         font-size: 14px;
         color: rgb(0, 0, 0);
     }

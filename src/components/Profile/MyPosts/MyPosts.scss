@@ -6,10 +6,14 @@
         display: flex;
         flex-direction: column;
         max-width: 390px;
-        background-color: $second-color;
-        padding: 10px;
         border-radius: 10px;
         word-break: break-word;
+    }
+
+    &__form{
+        padding: 15px;
+        border-radius: 10px;
+        background-color: $second-color;
     }
 
     &__input{
@@ -25,4 +29,12 @@
             outline: none;
         }
     }
+
+    &__board{
+        background-color: $second-color;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0;
+    }
 }
+
