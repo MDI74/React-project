@@ -17,10 +17,8 @@ const App = (props) => {
                 <Navigation state={props.state.navigation}/>
                 <main className="main ">
                     <Routes>
-                        <Route path="profile/*" element={<Profile state={props.state.profile} addPost={props.addPost}
-                                                                  updateNewPostText={props.updateNewPostText}/>}/>
-                        <Route path="dialogs/*" element={<Dialogs state={props.state.dialogs} addMessage={props.addMessage}
-                                                 updateNewMessageText={props.updateNewMessageText}/>}/>
+                        <Route path="profile/*" element={<Profile state={props.state.profile} dispatch={props.dispatch}/>}/>
+                        <Route path="dialogs/*" element={<Dialogs state={props.state.dialogs} dispatch={props.dispatch}/>}/>
                         <Route path="news" element={<News/>}/>
                         <Route path="music" element={<Music/>}/>
                         <Route path="settings" element={<Settings/>}/>

@@ -12,13 +12,13 @@ const MyPosts = (props) => {
 
     //Функция для добавления постов на страницу profile
     const addPost = () => {
-        props.addPost();
+        props.dispatch({type: 'ADD-POST'});
     }
 
     //Функция для обновления textarea при вводе текста
     const onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text});
     }
 
     return (
