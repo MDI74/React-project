@@ -12,9 +12,12 @@
   line-height: 150%;
   padding: 5px 15px;
   transition: all 0.2s ease-in 0s;
-  margin-left: auto;
 
-  &:hover{
+  &--mypost {
+    margin-left: auto;
+  }
+
+  &:hover {
     background-color: rgb(28, 69, 112);
   }
 }

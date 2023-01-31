@@ -1,29 +1,29 @@
 @import "../../base/variables";
 
 .header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    grid-area: header;
-    background-color: $first-color;
-  
-    &__content {
-      display: flex;
-      min-height: 70px;
-      align-items: center;
-    }
-  
-    &__logo img{
-      width: 60px;
-      padding: 0 5px;
-    }
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  grid-area: header;
+  background-color: $first-color;
 
-    &__title{
-      margin-left: 10px;
-      font-family: Roboto-bold, serif;
-      color: $second-color;
-      font-size: 24px;
-    }
+  &__content {
+    display: flex;
+    min-height: 70px;
+    align-items: center;
+  }
+
+  &__logo img {
+    width: 60px;
+    padding: 0 5px;
+  }
+
+  &__title {
+    margin-left: 10px;
+    font-family: Roboto-bold, serif;
+    color: $second-color;
+    font-size: 24px;
+  }
 }
   

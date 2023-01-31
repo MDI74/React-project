@@ -6,8 +6,9 @@ import FormMessage from "./FormMessage/FormMessage";
 
 const Dialogs = (props) => {
 
-    let dialogsElement= props.state.dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name} avatar={dialog.avatar} />);
-    let messagesElement = props.state.messagesData.map(message => <Message id={message.id} message={message.message} />);
+    let dialogsElement = props.state.dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name}
+                                                                           avatar={dialog.avatar}/>);
+    let messagesElement = props.state.messagesData.map(message => <Message id={message.id} message={message.message}/>);
 
     return (
         <section className="dialogs">
@@ -24,7 +25,8 @@ const Dialogs = (props) => {
                         <div className="message-item__content">
                             {messagesElement}
                         </div>
-                        <FormMessage addMessage={props.addMessage} newMessageText={props.state.newMessageText} updateNewMessageText={props.updateNewMessageText}/>
+                        <FormMessage addMessage={props.addMessage} newMessageText={props.state.newMessageText}
+                                     updateNewMessageText={props.updateNewMessageText}/>
                     </div>
                 </div>
             </div>

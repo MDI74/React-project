@@ -1,17 +1,17 @@
 import React from 'react'
 import './Header.scss'
-import logo  from '../../images/header/logo.svg'
+import logo from '../../images/header/logo.svg'
 
-const Header = (props) =>{
-    return(
+const Header = (props) => {
+    return (
         <header className="header">
             <div className="header__container _container">
                 <div className="header__content">
-                    <a href="#" className="header__logo"><img src={logo}  alt='Логотип'/></a>
+                    <a href="#" className="header__logo"><img src={logo} alt='Логотип'/></a>
                     <a href="#" className="header__title">Социальная сеть</a>
                 </div>
             </div>
-      </header>
+        </header>
     )
 }
 

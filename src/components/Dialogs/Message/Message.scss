@@ -1,21 +1,20 @@
 @import "../../../base/variables";
 
-.message-item{
+.message-item {
 
-    &__body{
-      margin: 5px 0;
-    }
+  &__body {
+    margin: 5px 0;
+  }
 
-    &__text{
-      display: inline-block;
-      border-radius: 5px;
-      padding: 7px;
-      max-width: 50%;
-      line-height: 1.45;
-      background-color: rgb(220, 219, 219);
-      word-wrap: break-word;
-
-    }
+  &__text {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 7px;
+    max-width: 50%;
+    line-height: 1.45;
+    background-color: rgb(220, 219, 219);
+    word-wrap: break-word;
+  }
 }
 
 

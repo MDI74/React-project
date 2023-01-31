@@ -3,9 +3,9 @@ import './MyPosts.scss'
 import Post from './Post/Post'
 import './../../Button/Buttons.scss'
 
-const MyPosts= (props) => {
+const MyPosts = (props) => {
 
-    let postsElement = props.postData.map(post => <Post id={post.id} message={post.message} likes={post.likescount} />);
+    let postsElement = props.postData.map(post => <Post id={post.id} message={post.message} likes={post.likes_count}/>);
 
     //Создает ссылку на textarea
     let newPostElement = React.createRef();
@@ -22,21 +22,24 @@ const MyPosts= (props) => {
     }
 
     return (
-      <div className="post">
-        <div className="post__container">
-          <div className="post__content">
-            <form action="" method="post" className="post__form">
-                <label for="mypost" className="post__title title-post">Написать пост:</label>
-                <textarea className="post__input" id="mypost" ref={newPostElement}  onChange={onPostChange} value={props.newPostText} />
-                <button className="post__button button-form" type="button" onClick={addPost}>Добавить пост</button>
-            </form>
-            <div className="post__board board-post">
-              <h4 className="board-post title-post">Мои посты:</h4>
-              {postsElement}
+        <div className="post">
+            <div className="post__container">
+                <div className="post__content">
+                    <form action="" method="post" className="post__form">
+                        <label htmlFor="my-post" className="post__title title-post">Написать пост:</label>
+                        <textarea className="post__input" id="my-post" ref={newPostElement} onChange={onPostChange}
+                                  value={props.newPostText}/>
+                        <button className="post__button button-form button-form--mypost" type="button"
+                                onClick={addPost}>Добавить пост
+                        </button>
+                    </form>
+                    <div className="post__board board-post">
+                        <h4 className="board-post title-post">Мои посты:</h4>
+                        {postsElement}
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     )
 }
 export default MyPosts;

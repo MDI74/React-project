@@ -1,30 +1,29 @@
 @import "../../../base/variables";
 
-.item-dialog{
+.item-dialog {
 
-    &__content{
-      & > *:not(:last-child) {
-        margin-bottom: 3px;
-      }
+  &__content {
+    & > *:not(:last-child) {
+      margin-bottom: 3px;
     }
+  }
 
-    &__body{
-      display: flex;
-      align-items: center;
-      padding: 10px 15px;
-      background-color: $second-color;
-      border-radius: 5px;
-      margin: 0 2px 0 0;
-    }
+  &__body {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: $second-color;
+    border-radius: 5px;
+  }
 
-    &__image img{
-      max-width: 40px;
-      margin: 0 15px 0 0;
-      border-radius: 50%;
-    }
+  &__image img {
+    max-width: 40px;
+    margin: 0 15px 0 0;
+    border-radius: 50%;
+  }
 
-    &__name{
-      color: rgb(29, 29, 28);
-      font-weight: 700;
-    }
+  &__name {
+    color: rgb(29, 29, 28);
+    font-weight: 700;
+  }
 }

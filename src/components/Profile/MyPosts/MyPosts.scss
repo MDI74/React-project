@@ -1,40 +1,40 @@
 @import '../../../base/variables';
 
-.post{
+.post {
 
-    &__content{
-        display: flex;
-        flex-direction: column;
-        max-width: 390px;
-        border-radius: 10px;
-        word-break: break-word;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 390px;
+    border-radius: 10px;
+    word-break: break-word;
+  }
+
+  &__form {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: $second-color;
+  }
+
+  &__input {
+    background-color: $second-color;
+    width: 100%;
+    min-height: 60px;
+    resize: none;
+    padding: 5px;
+    margin: 5px 10px 5px 0;
+    box-shadow: 2px 2px 2px 2px rgb(128, 128, 128);
+
+    &:focus {
+      outline: none;
     }
+  }
 
-    &__form{
-        padding: 15px;
-        border-radius: 10px;
-        background-color: $second-color;
-    }
-
-    &__input{
-        background-color: $second-color;
-        width: 100%;
-        min-height: 60px;
-        resize: none;
-        padding: 5px;
-        margin: 5px 10px 5px 0;
-        box-shadow: 2px 2px 2px 2px rgb(128, 128, 128);
-
-        &:focus{
-            outline: none;
-        }
-    }
-
-    &__board{
-        background-color: $second-color;
-        border-radius: 10px;
-        padding: 10px;
-        margin: 10px 0;
-    }
+  &__board {
+    background-color: $second-color;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+  }
 }
 

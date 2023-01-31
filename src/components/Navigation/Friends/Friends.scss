@@ -2,21 +2,22 @@
 
 .friends {
 
-    &__content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 20px 0;
-    }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+  }
 
-    &__title{
-      font-weight: 700;
-      font-size: $main-font-size;
-      color: $first-color;
-    }
-    &__info{
-      display: flex;
-      flex-wrap: wrap;
-    }
+  &__title {
+    font-weight: 700;
+    font-size: $main-font-size;
+    color: $first-color;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
   

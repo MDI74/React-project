@@ -1,21 +1,21 @@
 @import '../../base/variables';
 
 .nav {
-    grid-area: nav;
-    margin: 20px 10px 0 0;
-    border-radius: 10px;
-    min-height: 600px;
-    max-height: 800px;
+  grid-area: nav;
+  margin: 20px 10px 0 0;
+  border-radius: 10px;
+  min-height: 600px;
+  max-height: 800px;
 
-    &__content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 30px 10px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 10px;
 
-      & > *:not(:last-child) {
-        margin-bottom: 15px;
-      }
+    & > *:not(:last-child) {
+      margin-bottom: 15px;
     }
+  }
 }
   

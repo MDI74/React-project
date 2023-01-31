@@ -2,20 +2,20 @@
 
 .nav {
 
-    &__link {
-      font-size: $main-font-size;
-      font-weight: 700;
-      color: $first-color;
-      transition: all 0.2s ease-in;
+  &__link {
+    font-size: $main-font-size;
+    font-weight: 700;
+    color: $first-color;
+    transition: all 0.2s ease-in;
 
-      &.active{
-        color: rgb(0, 0, 0);
-      }
+    &.active {
+      color: rgb(0, 0, 0);
+    }
 
-      &:hover{
-        transition: all 0.1s ease-in;
-        color: $second-color;
-      }
-   }
+    &:hover {
+      transition: all 0.1s ease-in;
+      color: $second-color;
+    }
+  }
 }
   

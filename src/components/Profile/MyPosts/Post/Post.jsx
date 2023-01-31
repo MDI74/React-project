@@ -1,7 +1,7 @@
 import React from 'react'
 import './Post.scss'
 
-const Post= (props) => {
+const Post = (props) => {
     return (
         <div className="board-post__body">
             <div className="board-post__message">

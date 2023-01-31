@@ -2,42 +2,42 @@
 
 .profile {
 
-    &__background{
-      background-color: $second-color;
-      padding: 10px;
-      border-radius: 10px;
-    }
+  &__background {
+    background-color: $second-color;
+    padding: 10px;
+    border-radius: 10px;
+  }
 
-    &__item {
-      display: flex;
-      align-items: center;
-      margin: 10px 0;
-    }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
 
-    &__avatar {
-      background-color: $second-color;
-      padding: 10px;
-      border-radius: 10px;
-      margin:0 10px 0 0;
+  &__avatar {
+    background-color: $second-color;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px 0 0;
 
-      & img{
-        border-radius: 50%;
-        max-width: 120px;
-        width: 100%;
-      }
+    & img {
+      border-radius: 50%;
+      max-width: 120px;
+      width: 100%;
     }
+  }
 }
 
-.information-profile{
+.information-profile {
   background-color: $second-color;
   padding: 10px;
   border-radius: 10px;
 
-  >*:not(:last-child){
+  > *:not(:last-child) {
     margin: 0 0 5px 0;
   }
 
-  &__name{
+  &__name {
     font-size: 24px;
     font-weight: 700;
   }

@@ -5,11 +5,11 @@ const ProfileInfo = (props) => {
     return (
         <div className="profile__content">
             <div className="profile__background">
-                <img src={props.background} />
+                <img src={props.background}/>
             </div>
             <div className="profile__item">
                 <div className="profile__avatar">
-                    <img src={props.image} alt="Avatar" />
+                    <img src={props.image} alt="Avatar"/>
                 </div>
                 <div className="profile__information information-profile">
                     <h3 className="information-profile__name">

@@ -6,7 +6,7 @@ const Settings = (props) => {
         <section className="settings">
             <div className="settings__container">
                 <div className="settings__content">
-                Settings
+                    Settings
                 </div>
             </div>
         </section>

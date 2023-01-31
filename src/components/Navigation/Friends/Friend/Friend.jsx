@@ -2,12 +2,11 @@ import React from 'react'
 import './Friend.scss'
 import {NavLink} from "react-router-dom";
 
-
-const Friend = (props) =>{
+const Friend = (props) => {
 
     let path = 'profile/' + props.id;
 
-    return(
+    return (
         <NavLink to={path} className="info-friend__body">
             <div className="info-friend__avatar">
                 <img src={props.avatar} alt="Avatar"/>

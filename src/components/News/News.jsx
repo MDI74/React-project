@@ -6,7 +6,7 @@ const News = (props) => {
         <section className="news">
             <div className="news__container">
                 <div className="news__content">
-                News
+                    News
                 </div>
             </div>
         </section>

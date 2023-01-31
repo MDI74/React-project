@@ -6,7 +6,7 @@ const Music = (props) => {
         <section className="music">
             <div className="music__container">
                 <div className="music__content">
-                Music
+                    Music
                 </div>
             </div>
         </section>

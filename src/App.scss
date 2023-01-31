@@ -1,12 +1,12 @@
 @import "base/variables";
 @import "./base/fonts";
 
-body{
+body {
   font-family: Roboto-regular, serif;
-  
+
 }
 
-.wrapper{
+.wrapper {
   display: grid;
   max-width: 1440px;
   margin: 0 auto;
@@ -19,22 +19,21 @@ body{
 }
 
 .main {
-    font-size: $main-font-size;
-    margin: 25px 0 0 0;
-    grid-area: main;
+  font-size: $main-font-size;
+  margin: 25px 0 0 0;
+  grid-area: main;
 }
 
-._container{
+._container {
   max-width: 1440px;
   margin: 0 auto;
 }
 
-*::-webkit-scrollbar{
-  width: 3px;
+*::-webkit-scrollbar {
+  width: 2px;
 }
 
-::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: $first-color;
   border-radius: 2em;
-
 }
