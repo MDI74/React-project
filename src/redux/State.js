@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = () =>{
+    console.log("Test")
+}
 
 let state ={
     profile:{
@@ -71,6 +73,11 @@ export const addMessage = () =>{
 export const updateNewMessageText = (newText) =>{
     state.dialogs.newMessageText = newText;
     rerenderEntireTree(state);
+}
+
+export const subscribe = (observer) =>{
+    //Перерисовка страницы
+    rerenderEntireTree = observer; // Наблюдатель паттерн
 }
 
 export default state;
