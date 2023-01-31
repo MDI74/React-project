@@ -2,7 +2,7 @@ let store = {
     _state: {
         profile: {
             postsData: [
-                {id: 1, message: 'hello', likes_count: 12},
+                {id: 1, message: 'Hello', likes_count: 12},
                 {id: 2, message: 'ko', likes_count: 4},
                 {id: 3, message: 'second', likes_count: 11},
             ],

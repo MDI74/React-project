@@ -30,8 +30,7 @@ const MyPosts = (props) => {
                         <textarea className="post__input" id="my-post" ref={newPostElement} onChange={onPostChange}
                                   value={props.newPostText}/>
                         <button className="post__button button-form button-form--mypost" type="button"
-                                onClick={addPost}>Добавить пост
-                        </button>
+                                onClick={addPost}>Добавить пост</button>
                     </form>
                     <div className="post__board board-post">
                         <h4 className="board-post title-post">Мои посты:</h4>

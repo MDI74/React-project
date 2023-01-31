@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client'
 import './index.scss'
 import App from './App'
 import store from './redux/State'
-import dispatch from "./redux/State";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

@@ -7,8 +7,8 @@ const Header = (props) => {
         <header className="header">
             <div className="header__container _container">
                 <div className="header__content">
-                    <a href="#" className="header__logo"><img src={logo} alt='Логотип'/></a>
-                    <a href="#" className="header__title">Социальная сеть</a>
+                    <a href="/profile" className="header__logo"><img src={logo} alt='Логотип'/></a>
+                    <a href="/profile" className="header__title">Социальная сеть</a>
                 </div>
             </div>
         </header>
