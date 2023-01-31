@@ -8,11 +8,12 @@ import News from './components/News/News'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 import Dialogs from "./components/Dialogs/Dialogs"
+import Footer from "./components/Footer/Footer";
 
 const App = (props) => {
     return (
         <BrowserRouter>
-            <div className="wrapper">
+            <div className="wrapper _container">
                 <Header/>
                 <Navigation state={props.state.navigation}/>
                 <main className="main ">
@@ -24,6 +25,7 @@ const App = (props) => {
                         <Route path="settings" element={<Settings/>}/>
                     </Routes>
                 </main>
+                <Footer />
             </div>
         </BrowserRouter>
     );

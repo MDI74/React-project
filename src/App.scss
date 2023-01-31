@@ -1,26 +1,25 @@
 @import "base/variables";
 @import "./base/fonts";
 
+
 body {
   font-family: Roboto-regular, serif;
-
 }
 
 .wrapper {
   display: grid;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 5px;
+  height: 100vh;
   grid-template-areas:
   "header header"
-  "nav main";
+  "nav main"
+  "footer footer";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 15fr;
 }
 
 .main {
   font-size: $main-font-size;
-  margin: 25px 0 0 0;
+  margin: 25px 0 10px 0;
   grid-area: main;
 }
 

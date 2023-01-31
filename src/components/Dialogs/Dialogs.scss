@@ -5,6 +5,7 @@
   &__content {
     display: flex;
     max-width: 1000px;
+    padding: 0 10px 0 0;
   }
 
   &__items {
@@ -24,6 +25,7 @@
 
 .message-item {
   border-radius: 10px 10px 0 0;
+  height: 803px;
   background-color: $second-color;
 
   &__content {
@@ -32,8 +34,8 @@
     background-color: $second-color;
     padding: 10px 0 5px 15px;
     overflow-y: scroll;
-    max-height: 800px;
-    height: 770px;
+    max-height: 850px;
+    height: 760px;
   }
 }
 
@@ -42,7 +44,7 @@
   &__content {
     overflow-y: scroll;
     max-height: 850px;
-    height: 840px;
+    height: 760px;
   }
 }
 
