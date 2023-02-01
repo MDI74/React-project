@@ -1,6 +1,6 @@
-import profileReducer from "./Profille-reducer";
-import dialogsReducer from "./Dialogs-reducer";
-import navigationReducer from "./Navigation-reducer";
+import profileReducer from "./Profille-reducer"
+import dialogsReducer from "./Dialogs-reducer"
+import navigationReducer from "./Navigation-reducer"
 
 let store = {
     _state: {
@@ -29,8 +29,8 @@ let store = {
             ],
             messagesData: [
                 {id: 1, message: 'Hello, how are you?'},
-                {id: 2, message: 'brrrrr!'},
-                {id: 3, message: 'HAHAHAH!'},
+                {id: 2, message: 'br!'},
+                {id: 3, message: 'HAH!'},
             ],
             newMessageText: '',
         },
@@ -46,7 +46,7 @@ let store = {
     _callSubscriber() {
         console.log("State changes");
     },
-    //Фукнция для получения state
+    //Функция для получения state
     getState() {
         return this._state;
     },
@@ -56,7 +56,6 @@ let store = {
     },
     //Функция которая принимает action и вызывает необходимую функцию
     dispatch(action) {
-        debugger;
         this._state.profile = profileReducer(this._state.profile, action);
         this._state.dialogs = dialogsReducer(this._state.dialogs, action);
         this._state.navigation = navigationReducer(this._state.navigation, action);

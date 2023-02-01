@@ -1,5 +1,5 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_POST = 'ADD-POST'
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
 const profileReducer = (state, action) => {
     switch (action.type) {
         //Функция для добавления постов на страницу
@@ -16,11 +16,11 @@ const profileReducer = (state, action) => {
                 state.postsData.push(newPost);
                 state.newPostText = '';
             }
-        break
+            break
         //Функция для обновления текста в textarea в написании поста
         case UPDATE_NEW_POST_TEXT:
             state.newPostText = action.newText;
-        break;
+            break;
         default:
             return state;
     }

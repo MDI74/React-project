@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 30px 10px;
+    max-width: 160px;
 
     & > *:not(:last-child) {
       margin-bottom: 15px;

@@ -1,5 +1,5 @@
-const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE'
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 const dialogsReducer = (state, action) => {
     switch (action.type) {
         //Функция для добавления постов на страницу
@@ -13,11 +13,11 @@ const dialogsReducer = (state, action) => {
                 state.messagesData.push(newMessage);
                 state.newMessageText = '';
             }
-        break;
+            break;
         //Функция для обновления текста в textarea в чате
         case UPDATE_NEW_MESSAGE_TEXT:
             state.newMessageText = action.newText;
-        break;
+            break;
         default:
             return state;
     }
