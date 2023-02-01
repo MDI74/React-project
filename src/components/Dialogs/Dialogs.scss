@@ -31,11 +31,11 @@
   &__content {
     display: flex;
     flex-direction: column;
-    background-color: $second-color;
     padding: 10px 0 5px 15px;
     overflow-y: auto;
     max-height: 850px;
     height: 760px;
+    border-bottom: 2px solid $first-color;
   }
 }
 

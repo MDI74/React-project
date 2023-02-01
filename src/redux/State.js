@@ -99,7 +99,7 @@ let store = {
         if (action.type === ADD_MESSAGE) {
             this._addMessage();
         } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-            this._updateNewMessageText(action.newText)
+            this._updateNewMessageText(action.newText);
         } else if (action.type === ADD_POST) {
             this._addPost();
         } else if (action.type === UPDATE_NEW_POST_TEXT) {

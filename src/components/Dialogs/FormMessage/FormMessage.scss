@@ -2,17 +2,14 @@
 
 .form-message {
   display: flex;
-  padding: 5px 15px 15px 15px;
 
   &__input {
-    overflow-y: auto;
-    background-color: rgba(255, 255, 255, 0.7);
     width: 100%;
     min-height: 50px;
     resize: none;
     padding: 5px;
-    margin: 0 10px 0 0;
-    box-shadow: 2px 2px 2px 2px rgb(128, 128, 128);
+    box-shadow: 2px 0 2px rgb(128, 128, 128);
+    overflow-y: auto;
 
     &:focus {
       outline: none;
