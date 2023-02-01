@@ -1,7 +1,7 @@
 import React from 'react'
 import './FormMessage.scss'
 import './../../Button/Buttons.scss'
-import {addMessageActionCreator, updateNewMessageCreator} from "../../../redux/State";
+import {addMessageActionCreator, updateNewMessageCreator} from "../../../redux/Dialogs-reducer";
 
 const FormMessage = (props) => {
 
