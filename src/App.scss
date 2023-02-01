@@ -1,7 +1,6 @@
 @import "base/variables";
 @import "./base/fonts";
 
-
 body {
   font-family: Roboto-regular, serif;
 }
@@ -26,13 +25,4 @@ body {
 ._container {
   max-width: 1440px;
   margin: 0 auto;
-}
-
-*::-webkit-scrollbar {
-  width: 2px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: $first-color;
-  border-radius: 2em;
 }

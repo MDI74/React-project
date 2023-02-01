@@ -8,7 +8,7 @@ import News from './components/News/News'
 import Music from './components/Music/Music'
 import Settings from './components/Settings/Settings'
 import Dialogs from "./components/Dialogs/Dialogs"
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer"
 
 const App = (props) => {
     return (

@@ -33,7 +33,7 @@
     flex-direction: column;
     background-color: $second-color;
     padding: 10px 0 5px 15px;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 850px;
     height: 760px;
   }
@@ -42,7 +42,6 @@
 .item-dialog {
 
   &__content {
-    overflow-y: scroll;
     max-height: 850px;
     height: 760px;
   }
