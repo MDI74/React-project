@@ -30,8 +30,8 @@ let store = {
             ],
             messagesData: [
                 {id: 1, message: 'Hello, how are you?'},
-                {id: 2, message: 'efw'},
-                {id: 3, message: 'gtrg'},
+                {id: 2, message: 'brrrrr!'},
+                {id: 3, message: 'HAHAHAH!'},
             ],
             newMessageText: '',
         },
@@ -67,7 +67,9 @@ let store = {
     },
     //Функция для добавления постов на страницу
     _addPost() {
-        if (this._state.profile.newPostText) {
+        if (this._state.profile.newPostText || this._state.profile.newPostText.length < 10) {
+            alert('Пост должен быть минимум из 10 символов');
+        } else {
             let newPost = {
                 id: 1,
                 //Получаем значение текста из state который обновляется при вводе любого символа в посте
