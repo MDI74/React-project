@@ -4,7 +4,7 @@
 
   &__body {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     max-height: 500px;
     margin: 5px 0;
     background-color: rgb(219, 218, 218);
@@ -13,8 +13,6 @@
   }
 
   &__message {
-    display: flex;
-    flex-direction: column;
     flex: 1 1 auto;
     padding: 10px 15px;
     font-size: 14px;
