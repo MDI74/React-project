@@ -49,6 +49,7 @@ let store = {
     _callSubscriber() {
         console.log("State changes");
     },
+
     //Функция для получения state
     getState() {
         return this._state;
