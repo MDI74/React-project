@@ -4,14 +4,15 @@
 
   &__content {
     display: flex;
-    padding: 0 10px 0 0;
+    max-height: 810px;
+    max-width: 950px;
+    padding: 0 10px;
   }
 
   &__items {
     display: flex;
     flex-direction: column;
     flex: 1 0 30%;
-    max-width: 250px;
     margin: 0 10px 0 0;
     border-radius: 10px;
   }
@@ -25,33 +26,32 @@
 
 .message-item {
   border-radius: 10px 10px 0 0;
-  height: 803px;
-  max-width: 660px;
   background-color: $second-color;
 
   &__content {
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
     padding: 10px 15px 5px 15px;
-    overflow-y: auto;
-    max-height: 850px;
-    height: 760px;
     border-bottom: 2px solid $first-color;
+    overflow-y: auto;
   }
 }
 
 .item-dialog {
 
   &__content {
-    max-height: 850px;
-    height: 760px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow-y: auto;
   }
 }
 
 .title-dialog {
+  font-family: Roboto-bold, serif;
   width: 100%;
   text-align: center;
-  font-family: Roboto-bold, serif;
   background-color: $second-color;
   padding: 15px;
   color: rgb(58, 54, 54);

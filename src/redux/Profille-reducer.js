@@ -5,7 +5,7 @@ const profileReducer = (state, action) => {
         //Функция для добавления постов на страницу
         case ADD_POST:
             if (!state.newPostText || state.newPostText.length < 5) {
-                alert('Пост должен быть минимум из 10 символов');
+                alert('Пост должен быть минимум из 5 символов');
             } else {
                 let newPost = {
                     id: 1,

@@ -12,9 +12,11 @@
     display: flex;
     align-items: center;
     margin: 10px 0;
+    max-width: 440px;
   }
 
   &__avatar {
+    flex: 1 0 30%;
     background-color: $second-color;
     padding: 10px;
     border-radius: 10px;
@@ -23,12 +25,14 @@
     & img {
       border-radius: 50%;
       max-width: 120px;
-      width: 100%;
     }
   }
 }
 
 .information-profile {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 70%;
   background-color: $second-color;
   padding: 10px;
   border-radius: 10px;
@@ -38,7 +42,7 @@
   }
 
   &__name {
+    font-family: Roboto-bold, serif;
     font-size: 24px;
-    font-weight: 700;
   }
 }

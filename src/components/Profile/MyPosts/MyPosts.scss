@@ -1,11 +1,12 @@
 @import '../../../base/variables';
 
 .post {
+  max-width: 450px;
 
   &__content {
     display: flex;
     flex-direction: column;
-    max-width: 390px;
+    flex: 1 1 auto;
     border-radius: 10px;
     word-break: break-word;
   }
@@ -20,9 +21,9 @@
     background-color: $second-color;
     width: 100%;
     min-height: 60px;
-    resize: none;
     padding: 5px;
     margin: 5px 10px 5px 0;
+    resize: none;
     box-shadow: 2px 2px 2px 2px rgb(128, 128, 128);
 
     &:focus {
@@ -31,6 +32,9 @@
   }
 
   &__board {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
     background-color: $second-color;
     border-radius: 10px;
     padding: 10px;
