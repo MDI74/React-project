@@ -47,6 +47,7 @@ let store = {
     _callSubscriber() {
         console.log("State changes");
     },
+    //Функция для добавления собщений в чат
     _addMessage() {
         if (this._state.dialogs.newMessageText) {
             let newMessage = {
@@ -59,15 +60,17 @@ let store = {
         }
         this._callSubscriber(this._state);
     },
+    //Функция для обновления текста в textarea в чате
     _updateNewMessageText(newText) {
         this._state.dialogs.newMessageText = newText;
         this._callSubscriber(this._state);
     },
+    //Функция для добавления постов на страницу
     _addPost() {
         if (this._state.profile.newPostText) {
             let newPost = {
                 id: 1,
-                //получаем значение текста из state который обновляется при вводе любого символа в посте
+                //Получаем значение текста из state который обновляется при вводе любого символа в посте
                 message: this._state.profile.newPostText,
                 likes_count: 0,
             };
@@ -76,19 +79,20 @@ let store = {
         }
         this._callSubscriber(this._state);
     },
+    //Функция для обновления текста в textarea в написании поста
     _updateNewPostText(newText) {
         this._state.profile.newPostText = newText;
         this._callSubscriber(this._state);
     },
-
+    //Фукнция для получения state
     getState() {
         return this._state;
     },
+    //Фукнция для перерисовки страницы
     subscribe(observer) {
-        //Перерисовка страницы
         this._callSubscriber = observer; // Наблюдатель паттерн
     },
-
+    //Функция которая принимает action и вызывает необходимую функцию
     dispatch(action) {
         if (action.type === ADD_MESSAGE) {
             this._addMessage();

@@ -2,7 +2,7 @@ import React from 'react'
 import './MyPosts.scss'
 import Post from './Post/Post'
 import './../../Button/Buttons.scss'
-import {addPostActionCreator, updateNewPostCreator} from "../../../redux/State";
+import {addPostActionCreator, updateNewPostCreator} from "../../../redux/State"
 
 const MyPosts = (props) => {
 

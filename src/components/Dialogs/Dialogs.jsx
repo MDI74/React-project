@@ -2,7 +2,7 @@ import React from 'react'
 import './Dialogs.scss'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
-import FormMessage from "./FormMessage/FormMessage";
+import FormMessage from "./FormMessage/FormMessage"
 
 const Dialogs = (props) => {
 
