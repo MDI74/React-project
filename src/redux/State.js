@@ -1,3 +1,8 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+
 let store = {
     _state: {
         profile: {
@@ -85,16 +90,27 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === 'ADD-MESSAGE') {
+        if (action.type === ADD_MESSAGE) {
             this._addMessage();
-        } else if (action.type === 'UPDATE-NEW-MESSAGE-TEXT') {
+        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
             this._updateNewMessageText(action.newText)
-        } else if (action.type === 'ADD-POST') {
+        } else if (action.type === ADD_POST) {
             this._addPost();
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._updateNewPostText(action.newText);
         }
-    }
+    },
 }
+
+//Создание action объектов
+export const addPostActionCreator = () => ({type: ADD_POST});
+
+export const updateNewPostCreator = (text) =>
+    ({type: UPDATE_NEW_POST_TEXT, newText: text});
+
+export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
+
+export const updateNewMessageCreator = (text) =>
+    ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text});
 
 export default store;

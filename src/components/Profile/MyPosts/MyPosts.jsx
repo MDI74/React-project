@@ -2,6 +2,7 @@ import React from 'react'
 import './MyPosts.scss'
 import Post from './Post/Post'
 import './../../Button/Buttons.scss'
+import {addPostActionCreator, updateNewPostCreator} from "../../../redux/State";
 
 const MyPosts = (props) => {
 
@@ -12,13 +13,15 @@ const MyPosts = (props) => {
 
     //Функция для добавления постов на страницу profile
     const addPost = () => {
-        props.dispatch({type: 'ADD-POST'});
+        let action = addPostActionCreator()
+        props.dispatch(action);
     }
 
     //Функция для обновления textarea при вводе текста
     const onPostChange = () => {
         let text = newPostElement.current.value;
-        props.dispatch({type: 'UPDATE-NEW-POST-TEXT', newText: text});
+        let action = updateNewPostCreator(text);
+        props.dispatch(action);
     }
 
     return (
@@ -30,7 +33,8 @@ const MyPosts = (props) => {
                         <textarea className="post__input" id="my-post" ref={newPostElement} onChange={onPostChange}
                                   value={props.newPostText}/>
                         <button className="post__button button-form button-form--mypost" type="button"
-                                onClick={addPost}>Добавить пост</button>
+                                onClick={addPost}>Добавить пост
+                        </button>
                     </form>
                     <div className="post__board board-post">
                         <h4 className="board-post title-post">Мои посты:</h4>

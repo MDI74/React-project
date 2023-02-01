@@ -1,17 +1,24 @@
 import React from 'react'
 import './FormMessage.scss'
 import './../../Button/Buttons.scss'
+import {addMessageActionCreator, updateNewMessageCreator} from "../../../redux/State";
 
 const FormMessage = (props) => {
 
+    //Создает ссылку на textarea
     let newMessageElement = React.createRef();
 
+    //Функция для добавления сообщений на страницу profile
     const addMessage = () => {
-        props.dispatch({type: 'ADD-MESSAGE'});
+        let action = addMessageActionCreator();
+        props.dispatch(action);
     }
+
+    //Функция для обновления textarea при вводе текста
     const onMessageChange = () => {
         let text = newMessageElement.current.value;
-        props.dispatch({type: 'UPDATE-NEW-MESSAGE-TEXT', newText: text});
+        let action = updateNewMessageCreator(text);
+        props.dispatch(action);
     }
 
     return (
