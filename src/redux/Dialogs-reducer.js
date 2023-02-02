@@ -2,19 +2,19 @@ const ADD_MESSAGE = 'ADD-MESSAGE'
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 const dialogsReducer = (state, action) => {
     switch (action.type) {
-        //Функция для добавления постов на страницу
+        //Добавления постов на страницу
         case ADD_MESSAGE:
             if (state.newMessageText) {
                 let newMessage = {
                     id: 1,
-                    //получаем значение текста из state который обновляется при вводе любого символа в чате
+                    //Получаем значение текста из state который обновляется при вводе любого символа в чате
                     message: state.newMessageText,
                 };
                 state.messagesData.push(newMessage);
                 state.newMessageText = '';
             }
             break;
-        //Функция для обновления текста в textarea в чате
+        //Обновление текста в textarea в чате
         case UPDATE_NEW_MESSAGE_TEXT:
             state.newMessageText = action.newText;
             break;

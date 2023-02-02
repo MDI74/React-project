@@ -4,7 +4,7 @@
 
   &__content {
     display: flex;
-    max-height: 810px;
+    height: calc(100vh - 85px);
     max-width: 950px;
     padding: 0 10px;
   }

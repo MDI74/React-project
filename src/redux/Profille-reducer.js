@@ -2,7 +2,7 @@ const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
 const profileReducer = (state, action) => {
     switch (action.type) {
-        //Функция для добавления постов на страницу
+        //Добавление постов на страницу
         case ADD_POST:
             if (!state.newPostText || state.newPostText.length < 5) {
                 alert('Пост должен быть минимум из 5 символов');
@@ -17,7 +17,7 @@ const profileReducer = (state, action) => {
                 state.newPostText = '';
             }
             break
-        //Функция для обновления текста в textarea в написании поста
+        //Обновление текста в textarea поста
         case UPDATE_NEW_POST_TEXT:
             state.newPostText = action.newText;
             break;
