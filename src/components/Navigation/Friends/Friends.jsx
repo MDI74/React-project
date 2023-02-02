@@ -1,5 +1,5 @@
-import React from 'react'
-import './Friends.scss'
+import React from "react";
+import "./Friends.scss";
 import Friend from "./Friend/Friend";
 
 const Friends = (props) => {

@@ -1,14 +1,16 @@
-import React from 'react'
-import './Dialogs.scss'
-import DialogItem from './DialogItem/DialogItem'
-import Message from './Message/Message'
-import FormMessage from "./FormMessage/FormMessage"
+import React from "react";
+import "./Dialogs.scss";
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
+import FormMessageContainer from "./FormMessage/FormMessageContainer";
 
 const Dialogs = (props) => {
 
-    let dialogsElement = props.state.dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name}
+    let state = props.store.getState()
+
+    let dialogsElement = state.dialogs.dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name}
                                                                            avatar={dialog.avatar}/>);
-    let messagesElement = props.state.messagesData.map(message => <Message id={message.id} message={message.message}/>);
+    let messagesElement = state.dialogs.messagesData.map(message => <Message id={message.id} message={message.message}/>);
 
     return (
         <section className="dialogs">
@@ -25,7 +27,7 @@ const Dialogs = (props) => {
                         <div className="message-item__content">
                             {messagesElement}
                         </div>
-                        <FormMessage newMessageText={props.state.newMessageText} dispatch={props.dispatch}/>
+                        <FormMessageContainer store = {props.store}/>
                     </div>
                 </div>
             </div>

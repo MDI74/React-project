@@ -1,5 +1,5 @@
-import React from 'react'
-import './Music.scss'
+import React from "react";
+import "./Music.scss";
 
 const Music = (props) => {
     return (

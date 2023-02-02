@@ -1,5 +1,5 @@
-import React from 'react'
-import './Settings.scss'
+import React from "react";
+import "./Settings.scss";
 
 const Settings = (props) => {
     return (

@@ -1,6 +1,6 @@
-import React from 'react'
-import {NavLink} from 'react-router-dom'
-import './NavigationItem.scss'
+import React from "react";
+import {NavLink} from "react-router-dom";
+import "./NavigationItem.scss";
 
 const NavigationItem = (props) => {
 

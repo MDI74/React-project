@@ -1,17 +1,17 @@
-import React from 'react'
-import MyPosts from './MyPosts/MyPosts'
-import './Profile.scss'
-import ProfileInfo from './ProfileInfo/ProfileInfo'
+import React from "react";
+import "./Profile.scss";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
-    debugger;
     return (
         <section className="profile">
             <div className="profile__container">
                 <ProfileInfo background="https://puzzleit.ru/files/puzzles/203/202512/_original.jpg"
                              image="https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg"
                              name="Мякотин Дмитрий" date="26.09.2000" city="Челябинск"/>
-                <MyPosts postData={props.state.postsData} newPostText={props.state.newPostText} dispatch={props.dispatch}/>
+                <MyPostsContainer store={props.store}/>
+
             </div>
         </section>
     )

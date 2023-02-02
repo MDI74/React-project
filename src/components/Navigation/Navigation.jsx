@@ -1,6 +1,6 @@
-import React from 'react'
-import './Navigation.scss'
-import NavigationItem from './NavigationItem/NavigationItem'
+import React from "react";
+import "./Navigation.scss";
+import NavigationItem from "./NavigationItem/NavigationItem";
 import Friends from "./Friends/Friends";
 
 const Navigation = (props) => {

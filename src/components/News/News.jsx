@@ -1,5 +1,5 @@
-import React from 'react'
-import './News.scss'
+import React from "react";
+import "./News.scss";
 
 const News = (props) => {
     return (

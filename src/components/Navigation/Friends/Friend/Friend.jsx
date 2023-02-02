@@ -1,5 +1,5 @@
-import React from 'react'
-import './Friend.scss'
+import React from "react";
+import "./Friend.scss";
 import {NavLink} from "react-router-dom";
 
 const Friend = (props) => {

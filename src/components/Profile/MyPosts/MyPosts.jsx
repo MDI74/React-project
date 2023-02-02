@@ -1,28 +1,24 @@
-import React from 'react'
-import './MyPosts.scss'
-import Post from './Post/Post'
-import './../../Button/Buttons.scss'
-import {addPostActionCreator, updateNewPostCreator} from '../../../redux/Profille-reducer'
+import React from "react";
+import "./MyPosts.scss";
+import Post from "./Post/Post"
+import "./../../Button/Buttons.scss";
 
 const MyPosts = (props) => {
 
-    let postsElement = props.postData.map(post => <Post id={post.id} message={post.message} likes={post.likes_count}/>);
+    let postsElement = props.postsData.map(post => <Post id={post.id} message={post.message} likes={post.likes_count}/>);
 
     //Создает ссылку на textarea
     let newPostElement = React.createRef();
 
     //Функция для добавления постов на страницу profile
-    const addPost = () => {
-        let action = addPostActionCreator()
-        props.dispatch(action);
+    const onAddPost = () => {
+        props.addPost();
     }
 
     //Функция для обновления textarea при вводе текста
     const onPostChange = () => {
-        debugger;
         let text = newPostElement.current.value;
-        let action = updateNewPostCreator(text);
-        props.dispatch(action);
+        props.updateNewPostText(text);
     }
 
     return (
@@ -34,7 +30,7 @@ const MyPosts = (props) => {
                         <textarea className="post__input" id="my-post" ref={newPostElement} onChange={onPostChange}
                                   value={props.newPostText}/>
                         <button className="post__button button-form button-form--mypost" type="button"
-                                onClick={addPost}>Добавить пост
+                                onClick={onAddPost}>Добавить пост
                         </button>
                     </form>
                     <div className="post__board board-post">
