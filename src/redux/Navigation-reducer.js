@@ -1,4 +1,3 @@
-
 let initialState = {
     friendsData: [
         {id: 1, name: 'Dmitriy', avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg'},

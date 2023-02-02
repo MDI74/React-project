@@ -4,7 +4,7 @@ import FormMessage from "./FormMessage";
 
 const FormMessageContainer = (props) => {
 
-    let state = props.store.getState();
+    let state = props.store.getState().dialogs;
 
     //Функция для добавления сообщений на страницу profile
     const addMessage = () => {
@@ -19,7 +19,7 @@ const FormMessageContainer = (props) => {
 
     return (
         <FormMessage addMessage={addMessage} updateNewMessageText={updateNewMessageText}
-                     newMessageText={state.dialogs.newMessageText}/>
+                     newMessageText={state.newMessageText}/>
     )
 }
 export default FormMessageContainer;

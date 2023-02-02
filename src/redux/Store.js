@@ -1,6 +1,6 @@
-import profileReducer from "./Profille-reducer"
-import dialogsReducer from "./Dialogs-reducer"
-import navigationReducer from "./Navigation-reducer"
+import profileReducer from "./Profille-reducer";
+import dialogsReducer from "./Dialogs-reducer";
+import navigationReducer from "./Navigation-reducer";
 
 let store = {
     _state: {
@@ -47,7 +47,7 @@ let store = {
         }
     },
     _callSubscriber() {
-        console.log("State changes");
+        console.log('State changes');
     },
 
     //Функция для получения state

@@ -6,11 +6,11 @@ import FormMessageContainer from "./FormMessage/FormMessageContainer";
 
 const Dialogs = (props) => {
 
-    let state = props.store.getState()
+    let state = props.store.getState().dialogs;
 
-    let dialogsElement = state.dialogs.dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name}
+    let dialogsElement = state.dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name}
                                                                            avatar={dialog.avatar}/>);
-    let messagesElement = state.dialogs.messagesData.map(message => <Message id={message.id} message={message.message}/>);
+    let messagesElement = state.messagesData.map(message => <Message id={message.id} message={message.message}/>);
 
     return (
         <section className="dialogs">

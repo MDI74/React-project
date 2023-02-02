@@ -1,4 +1,4 @@
-import {combineReducers, legacy_createStore as createStore} from 'redux'
+import {combineReducers, legacy_createStore as createStore} from "redux";
 import profileReducer from "./Profille-reducer";
 import dialogsReducer from "./Dialogs-reducer";
 import navigationReducer from "./Navigation-reducer";

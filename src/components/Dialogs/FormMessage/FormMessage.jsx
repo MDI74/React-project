@@ -9,7 +9,7 @@ const FormMessage = (props) => {
 
     //Функция для добавления сообщений на страницу profile
     const onAddMessage = () => {
-        props.addMessage()
+        props.addMessage();
     }
 
     //Функция для обновления textarea при вводе текста

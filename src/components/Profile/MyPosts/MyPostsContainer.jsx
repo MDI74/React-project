@@ -4,7 +4,7 @@ import MyPosts from "./MyPosts";
 
 const MyPostsContainer = (props) => {
 
-    let state = props.store.getState();
+    let state = props.store.getState().profile;
 
     //Функция для добавления постов на страницу profile
     const addPost = () => {
@@ -18,8 +18,8 @@ const MyPostsContainer = (props) => {
     }
 
     return (
-        <MyPosts updateNewPostText={updateNewPostText} addPost={addPost} postsData={state.profile.postsData}
-                 newPostText={state.profile.newPostText}/>
+        <MyPosts updateNewPostText={updateNewPostText} addPost={addPost} postsData={state.postsData}
+                 newPostText={state.newPostText}/>
     )
 }
 export default MyPostsContainer;

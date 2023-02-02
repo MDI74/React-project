@@ -3,6 +3,7 @@
 .item-dialog {
 
   &__content {
+
     & > *:not(:last-child) {
       margin-bottom: 3px;
     }

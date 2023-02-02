@@ -5,7 +5,8 @@ import "./../../Button/Buttons.scss";
 
 const MyPosts = (props) => {
 
-    let postsElement = props.postsData.map(post => <Post id={post.id} message={post.message} likes={post.likes_count}/>);
+    let postsElement = props.postsData.map(post => <Post id={post.id} message={post.message}
+                                                         likes={post.likes_count}/>);
 
     //Создает ссылку на textarea
     let newPostElement = React.createRef();
