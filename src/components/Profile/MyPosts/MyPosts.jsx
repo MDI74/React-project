@@ -2,7 +2,7 @@ import React from 'react'
 import './MyPosts.scss'
 import Post from './Post/Post'
 import './../../Button/Buttons.scss'
-import {addPostActionCreator, updateNewPostCreator} from "../../../redux/Profille-reducer"
+import {addPostActionCreator, updateNewPostCreator} from '../../../redux/Profille-reducer'
 
 const MyPosts = (props) => {
 
@@ -19,6 +19,7 @@ const MyPosts = (props) => {
 
     //Функция для обновления textarea при вводе текста
     const onPostChange = () => {
+        debugger;
         let text = newPostElement.current.value;
         let action = updateNewPostCreator(text);
         props.dispatch(action);

@@ -1,6 +1,17 @@
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
-const profileReducer = (state, action) => {
+
+//Создаем state с данными по умолчанию
+let initialState = {
+    postsData: [
+        {id: 1, message: 'Hello', likes_count: 12},
+        {id: 2, message: 'ko', likes_count: 4},
+        {id: 3, message: 'second', likes_count: 11},
+    ],
+    newPostText: '',
+}
+const profileReducer = (state = initialState, action) => {
+
     switch (action.type) {
         //Добавление постов на страницу
         case ADD_POST:
@@ -16,7 +27,7 @@ const profileReducer = (state, action) => {
                 state.postsData.push(newPost);
                 state.newPostText = '';
             }
-            break
+            break;
         //Обновление текста в textarea поста
         case UPDATE_NEW_POST_TEXT:
             state.newPostText = action.newText;
