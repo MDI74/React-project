@@ -13,7 +13,7 @@ const Navigation = (props) => {
                     <NavigationItem src="/news" name="Новости"/>
                     <NavigationItem src="/music" name="Музыка"/>
                     <NavigationItem src="/settings" name="Настройки"/>
-                    <Friends friendsData={props.state.friendsData}/>
+                    {/*<Friends friendsData={props.state.friendsData}/>*/}
                 </div>
             </div>
         </div>

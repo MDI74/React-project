@@ -1,25 +1,26 @@
-import React from "react";
 import {addMessageActionCreator, updateNewMessageCreator} from "../../../redux/Dialogs-reducer";
 import FormMessage from "./FormMessage";
+import {connect} from "react-redux";
 
-const FormMessageContainer = (props) => {
-
-    let state = props.store.getState().dialogs;
-
-    //Функция для добавления сообщений на страницу profile
-    const addMessage = () => {
-        props.store.dispatch(addMessageActionCreator());
+let mapStateToProps = (state) => {
+    return {
+        newMessageText: state.dialogs.newMessageText
     }
-
-    //Функция для обновления textarea при вводе текста
-    const updateNewMessageText = (text) => {
-        let action = updateNewMessageCreator(text);
-        props.store.dispatch(action);
-    }
-
-    return (
-        <FormMessage addMessage={addMessage} updateNewMessageText={updateNewMessageText}
-                     newMessageText={state.newMessageText}/>
-    )
 }
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        //Функция для добавления сообщений на страницу profile
+        addMessage: () => {
+            dispatch(addMessageActionCreator());
+        },
+        //Функция для обновления textarea при вводе текста
+        updateNewMessageText: (text) => {
+            dispatch(updateNewMessageCreator(text));
+        }
+    }
+}
+
+//Создаем контейнерную компоненту с помощью react-redux
+const FormMessageContainer = connect(mapStateToProps, mapDispatchToProps)(FormMessage);
 export default FormMessageContainer;
