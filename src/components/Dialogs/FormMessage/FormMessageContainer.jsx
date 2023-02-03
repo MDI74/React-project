@@ -2,12 +2,13 @@ import {addMessageActionCreator, updateNewMessageCreator} from "../../../redux/D
 import FormMessage from "./FormMessage";
 import {connect} from "react-redux";
 
+//Функция для передачи state
 let mapStateToProps = (state) => {
     return {
         newMessageText: state.dialogs.newMessageText
     }
 }
-
+//Функция для передачи dispatch
 let mapDispatchToProps = (dispatch) => {
     return {
         //Функция для добавления сообщений на страницу profile

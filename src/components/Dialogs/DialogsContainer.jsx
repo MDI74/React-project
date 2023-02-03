@@ -15,5 +15,5 @@ let mapDispatchToProps = (dispatch) => {
 
 //Создаем контейнерную компоненту с помощью react-redux
 
-const DialogsContainer = connect(mapStateToProps, mapDispatchToProps) (Dialogs);
+const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 export default DialogsContainer;

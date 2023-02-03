@@ -24,18 +24,21 @@ const profileReducer = (state = initialState, action) => {
                     message: state.newPostText,
                     likes_count: 0,
                 };
-                state.postsData.push(newPost);
-                state.newPostText = '';
+                let stateCopy = {...state};
+                stateCopy.postsData = [...state.postsData]
+                stateCopy.postsData.push(newPost)
+                stateCopy.newPostText = '';
+                return stateCopy;
             }
             break;
         //Обновление текста в textarea поста
         case UPDATE_NEW_POST_TEXT:
-            state.newPostText = action.newText;
-            break;
+            let stateCopy = {...state};
+            stateCopy.newPostText = action.newText;
+            return stateCopy;
         default:
             return state;
     }
-    return state;
 }
 
 export const addPostActionCreator = () => ({type: ADD_POST});

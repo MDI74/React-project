@@ -118,14 +118,18 @@ const dialogsReducer = (state = initialState, action) => {
                     //Получаем значение текста из state который обновляется при вводе любого символа в чате
                     message: state.newMessageText,
                 };
-                state.messagesData.push(newMessage);
-                state.newMessageText = '';
+                let stateCopy = {...state};
+                stateCopy.messagesData = [...state.messagesData]
+                stateCopy.messagesData.push(newMessage)
+                stateCopy.newMessageText = '';
+                return stateCopy;
             }
             break;
         //Обновление текста в textarea в чате
         case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.newText;
-            break;
+            let stateCopy = {...state};
+            stateCopy.newMessageText = action.newText;
+            return stateCopy;
         default:
             return state;
     }
