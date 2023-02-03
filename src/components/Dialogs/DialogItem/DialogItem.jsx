@@ -11,7 +11,10 @@ const DialogItem = (props) => {
             <div className="item-dialog__image">
                 <img src={props.avatar} alt="Avatar"/>
             </div>
-            <p className="item-dialog__name">{props.name}</p>
+            <div className="item-dialog__info">
+                <h4 className="item-dialog__name">{props.name}</h4>
+                <p className="item-dialog__message">{props.message} </p>
+            </div>
         </NavLink>
     )
 }

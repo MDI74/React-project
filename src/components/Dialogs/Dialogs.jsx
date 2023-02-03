@@ -9,7 +9,7 @@ const Dialogs = (props) => {
     let state = props.store.getState().dialogs;
 
     let dialogsElement = state.dialogsData.map(dialog => <DialogItem id={dialog.id} name={dialog.name}
-                                                                           avatar={dialog.avatar}/>);
+                                                                           avatar={dialog.avatar} message ={dialog.message}/>);
     let messagesElement = state.messagesData.map(message => <Message id={message.id} message={message.message}/>);
 
     return (

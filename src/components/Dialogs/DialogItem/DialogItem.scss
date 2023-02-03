@@ -15,6 +15,7 @@
     padding: 10px 15px;
     background-color: $second-color;
     border-radius: 5px;
+    max-width: 372px;
   }
 
   &__image img {
@@ -23,9 +24,25 @@
     border-radius: 50%;
   }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__name {
     font-size: 14px;
     color: rgb(29, 29, 28);
     font-weight: 700;
+    margin: 0 0 2px 0;
   }
+
+  &__message {
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    color: rgb(128, 128, 128);
+  }
+
 }
