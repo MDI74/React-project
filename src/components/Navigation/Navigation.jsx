@@ -10,10 +10,11 @@ const Navigation = (props) => {
                 <div className="nav__content">
                     <NavigationItem src="/profile" name="Профиль"/>
                     <NavigationItem src="/dialogs" name="Сообщения"/>
+                    <NavigationItem src="/users" name="Найти друзей"/>
                     <NavigationItem src="/news" name="Новости"/>
                     <NavigationItem src="/music" name="Музыка"/>
                     <NavigationItem src="/settings" name="Настройки"/>
-                    {/*<Friends friendsData={props.state.friendsData}/>*/}
+                    {/*<Friends friendsData={props.state.friends}/>*/}
                 </div>
             </div>
         </div>

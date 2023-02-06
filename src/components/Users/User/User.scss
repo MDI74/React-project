@@ -1,0 +1,36 @@
+@import "../../../base/variables";
+
+
+.item-user {
+
+  &__body {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: $second-color;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+  }
+
+  &__image img {
+    max-width: 100px;
+    margin: 0 20px 0 0;
+    border-radius: 50%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__fullname {
+    font-family: Roboto-bold, serif;
+  }
+
+  &__status {
+    font-size: 12px;
+    color: rgb(128, 128, 128);
+  }
+
+}

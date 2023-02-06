@@ -4,8 +4,8 @@ import Dialogs from "./Dialogs";
 //Функция для передачи state
 let mapStateToProps = (state) => {
     return {
-        dialogsData: state.dialogs.dialogsData,
-        messagesData: state.dialogs.messagesData
+        dialogs: state.dialogsPage.dialogs,
+        messages: state.dialogsPage.messages
     }
 }
 //Функция для передачи dispatch

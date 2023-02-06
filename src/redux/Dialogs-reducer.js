@@ -2,113 +2,89 @@ const ADD_MESSAGE = 'ADD-MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 let initialState = {
-    dialogsData: [
+    dialogs: [
         {
             id: 1,
-            name: 'Dmitriy',
+            name: 'Дмитрий',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello'
+            message: 'Привет!'
         },
         {
             id: 2,
-            name: 'Sergey',
+            name: 'Сергей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
+            message: 'Как дела?'
         },
         {
             id: 3,
-            name: 'Katy',
+            name: 'Катя',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'пварв'
         },
         {
             id: 4,
-            name: 'Andrew',
+            name: 'Андрей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'укпук'
+        },
+        {
+            id: 1,
+            name: 'Дмитрий',
+            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
+            message: 'Привет!'
         },
         {
             id: 2,
-            name: 'Sergey',
+            name: 'Сергей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
+            message: 'Как дела?'
         },
         {
             id: 3,
-            name: 'Katy',
+            name: 'Катя',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'пварв'
         },
         {
             id: 4,
-            name: 'Andrew',
+            name: 'Андрей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'укпук'
+        },
+        {
+            id: 1,
+            name: 'Дмитрий',
+            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
+            message: 'Привет!'
         },
         {
             id: 2,
-            name: 'Sergey',
+            name: 'Сергей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
+            message: 'Как дела?'
         },
         {
             id: 3,
-            name: 'Katy',
+            name: 'Катя',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'пварв'
         },
         {
             id: 4,
-            name: 'Andrew',
+            name: 'Андрей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'укпук'
         },
-        {
-            id: 2,
-            name: 'Sergey',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
-        },
-        {
-            id: 3,
-            name: 'Katy',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
-        },
-        {
-            id: 4,
-            name: 'Andrew',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
-        },
-        {
-            id: 2,
-            name: 'Sergey',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
-        },
-        {
-            id: 3,
-            name: 'Katy',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
-        },
-        {
-            id: 4,
-            name: 'Andrew',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
-        },
-
     ],
-    messagesData: [
-        {id: 1, message: 'Hello, how are you?'},
+    messages: [
+        {id: 1, message: 'Привет, как дела?'},
         {id: 2, message: 'br!'},
         {id: 3, message: 'HAH!'},
     ],
     newMessageText: '',
 }
 const dialogsReducer = (state = initialState, action) => {
+
     switch (action.type) {
         //Добавления постов на страницу
         case ADD_MESSAGE:
@@ -118,22 +94,25 @@ const dialogsReducer = (state = initialState, action) => {
                     //Получаем значение текста из state который обновляется при вводе любого символа в чате
                     message: state.newMessageText,
                 };
-                let stateCopy = {...state};
-                stateCopy.messagesData = [...state.messagesData]
-                stateCopy.messagesData.push(newMessage)
-                stateCopy.newMessageText = '';
-                return stateCopy;
+                //Создаем объект и копируем в него state, и возвращаем его
+                return {
+                    ...state,
+                    newMessageText: '',
+                    //Копируем сообщения и добавляем новое в конец
+                    messages: [...state.messages, newMessage],
+                };
             }
             break;
         //Обновление текста в textarea в чате
         case UPDATE_NEW_MESSAGE_TEXT:
-            let stateCopy = {...state};
-            stateCopy.newMessageText = action.newText;
-            return stateCopy;
+            return {
+                ...state,
+                newMessageText: action.newText,
+            };
         default:
             return state;
     }
-    return state
+    return state;
 }
 
 export const addMessageActionCreator = () => ({type: ADD_MESSAGE});

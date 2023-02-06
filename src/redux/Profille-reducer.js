@@ -3,7 +3,7 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 //Создаем state с данными по умолчанию
 let initialState = {
-    postsData: [
+    posts: [
         {id: 1, message: 'Hello', likes_count: 12},
         {id: 2, message: 'ko', likes_count: 4},
         {id: 3, message: 'second', likes_count: 11},
@@ -24,26 +24,29 @@ const profileReducer = (state = initialState, action) => {
                     message: state.newPostText,
                     likes_count: 0,
                 };
-                let stateCopy = {...state};
-                stateCopy.postsData = [...state.postsData]
-                stateCopy.postsData.push(newPost)
-                stateCopy.newPostText = '';
-                return stateCopy;
+                //Создаем объект и копируем в него state, и сразу же возвращаем его
+                return {
+                    ...state,
+                    newPostText: '',
+                    //Копируем пост и добавляем новый в конец
+                    posts: [...state.posts, newPost]
+                };
             }
             break;
         //Обновление текста в textarea поста
         case UPDATE_NEW_POST_TEXT:
-            let stateCopy = {...state};
-            stateCopy.newPostText = action.newText;
-            return stateCopy;
+            return {
+                ...state,
+                newPostText: action.newText,
+            };
         default:
             return state;
     }
 }
 
-export const addPostActionCreator = () => ({type: ADD_POST});
+export const addPostAС = () => ({type: ADD_POST});
 
-export const updateNewPostActionCreator = (text) =>
+export const updateNewPostAС = (text) =>
     ({type: UPDATE_NEW_POST_TEXT, newText: text});
 
 export default profileReducer;

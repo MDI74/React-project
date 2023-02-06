@@ -1,0 +1,30 @@
+@import "../../base/variables";
+
+.users {
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  &__title {
+    font-family: Roboto-bold, serif;
+    width: 100%;
+    text-align: center;
+    background-color: $second-color;
+    padding: 15px;
+    color: rgb(58, 54, 54);
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid $first-color;
+  }
+}
+
+.item-user {
+
+  & > *:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+

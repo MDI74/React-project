@@ -22,7 +22,7 @@ const FormMessage = (props) => {
         <form action="" method="post" className="message__form form-message">
             <textarea className="form-message__input" placeholder="Ваше сообщение" ref={newMessageElement}
                       onChange={onMessageChange} value={props.newMessageText}/>
-            <button className="form-message__button button-form" type="button" onClick={onAddMessage}>Отправить</button>
+            <button className="form-message__button button" type="button" onClick={onAddMessage}>Отправить</button>
         </form>
     )
 }
