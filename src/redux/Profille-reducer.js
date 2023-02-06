@@ -3,7 +3,7 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 //Создаем state с данными по умолчанию
 let initialState = {
-    postsData: [
+    posts: [
         {id: 1, message: 'Hello', likes_count: 12},
         {id: 2, message: 'ko', likes_count: 4},
         {id: 3, message: 'second', likes_count: 11},
@@ -29,7 +29,7 @@ const profileReducer = (state = initialState, action) => {
                     ...state,
                     newPostText: '',
                     //Копируем пост и добавляем новое в конец
-                    postsData: [...state.postsData, newPost]
+                    posts: [...state.posts, newPost]
                 };
             }
             break;
@@ -44,9 +44,9 @@ const profileReducer = (state = initialState, action) => {
     }
 }
 
-export const addPostActionCreator = () => ({type: ADD_POST});
+export const addPostAС = () => ({type: ADD_POST});
 
-export const updateNewPostActionCreator = (text) =>
+export const updateNewPostAС = (text) =>
     ({type: UPDATE_NEW_POST_TEXT, newText: text});
 
 export default profileReducer;

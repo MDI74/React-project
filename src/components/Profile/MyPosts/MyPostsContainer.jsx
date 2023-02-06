@@ -1,12 +1,12 @@
-import {addPostActionCreator, updateNewPostActionCreator} from "../../../redux/Profille-reducer";
+import {addPostAС, updateNewPostAС} from "../../../redux/Profille-reducer";
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 
 //Функция для передачи state
 let mapStateToProps = (state) => {
     return {
-        postsData: state.profile.postsData,
-        newPostText: state.profile.newPostText
+        posts: state.profilePage.posts,
+        newPostText: state.profilePage.newPostText
     }
 }
 
@@ -15,11 +15,11 @@ let mapDispatchToProps = (dispatch) => {
     return {
         //Функция для добавления постов на страницу profile
         addPost: () => {
-            dispatch(addPostActionCreator());
+            dispatch(addPostAС());
         },
         //Функция для обновления textarea при вводе текста
         updateNewPostText: (text) => {
-            dispatch(updateNewPostActionCreator(text));
+            dispatch(updateNewPostAС(text));
         }
     }
 }

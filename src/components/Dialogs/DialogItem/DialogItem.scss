@@ -19,7 +19,7 @@
   }
 
   &__image img {
-    max-width: 40px;
+    max-width: 50px;
     margin: 0 15px 0 0;
     border-radius: 50%;
   }
@@ -30,7 +30,6 @@
   }
 
   &__name {
-    font-size: 14px;
     color: rgb(29, 29, 28);
     font-weight: 700;
     margin: 0 0 2px 0;
@@ -41,7 +40,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 12px;
+    font-size: 14px;
     color: rgb(128, 128, 128);
   }
 

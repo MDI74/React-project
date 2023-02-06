@@ -2,7 +2,7 @@ const ADD_MESSAGE = 'ADD-MESSAGE';
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 let initialState = {
-    dialogsData: [
+    dialogs: [
         {
             id: 1,
             name: 'Dmitriy',
@@ -101,7 +101,7 @@ let initialState = {
         },
 
     ],
-    messagesData: [
+    messages: [
         {id: 1, message: 'Hello, how are you?'},
         {id: 2, message: 'br!'},
         {id: 3, message: 'HAH!'},
@@ -124,7 +124,7 @@ const dialogsReducer = (state = initialState, action) => {
                     ...state,
                     newMessageText: '',
                     //Копируем сообщения и добавляем новое в конец
-                    messagesData: [...state.messagesData, newMessage]
+                    messages: [...state.messages, newMessage]
                 };
             }
             break;

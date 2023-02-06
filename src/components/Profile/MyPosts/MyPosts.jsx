@@ -5,7 +5,7 @@ import "./../../Button/Buttons.scss";
 
 const MyPosts = (props) => {
 
-    let postsElement = props.postsData.map(post => <Post key={post.id} id={post.id} message={post.message}
+    let postsElement = props.posts.map(post => <Post key={post.id} id={post.id} message={post.message}
                                                          likes={post.likes_count}/>);
 
     //Создает ссылку на textarea
@@ -30,7 +30,7 @@ const MyPosts = (props) => {
                         <label htmlFor="my-post" className="post__title title-post">Написать пост:</label>
                         <textarea className="post__input" id="my-post" ref={newPostElement} onChange={onPostChange}
                                   value={props.newPostText}/>
-                        <button className="post__button button-form button-form--mypost" type="button"
+                        <button className="post__button button button--mypost" type="button"
                                 onClick={onAddPost}>Добавить пост
                         </button>
                     </form>

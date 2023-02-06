@@ -1,6 +1,6 @@
 @import "../../base/variables";
 
-.button-form {
+.button{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,6 +15,10 @@
 
   &--mypost {
     margin-left: auto;
+  }
+
+  &--friend{
+    max-width: 160px;
   }
 
   &:hover {

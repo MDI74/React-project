@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 //Функция для передачи state
 let mapStateToProps = (state) => {
     return {
-        newMessageText: state.dialogs.newMessageText
+        newMessageText: state.dialogsPage.newMessageText
     }
 }
 //Функция для передачи dispatch
