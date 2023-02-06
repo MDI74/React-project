@@ -5,7 +5,6 @@ const SET_USERS = "SET-USERS";
 //Создаем state с данными по умолчанию
 let initialState = {
     users: []
-
 }
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -26,7 +25,7 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 users: state.users.map(user => {
                     if (user.id === action.userId) {
-                        return {...user, friend: false}
+                        return {...user, friend: false};
                     }
                     return user;
                 }),
@@ -35,7 +34,7 @@ const usersReducer = (state = initialState, action) => {
         case SET_USERS:
             return {
                 ...state,
-                users: [...state.users, ...action.users]
+                users: [...state.users, ...action.users],
             };
         default:
             return state;

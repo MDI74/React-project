@@ -2,9 +2,8 @@ import React from "react";
 import "./Users.scss";
 import User from "./User/User";
 
-
 const Users = (props) => {
-    debugger
+
     if (props.users.length === 0) {
         props.setUsers([{
             id: 1,

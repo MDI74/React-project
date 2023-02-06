@@ -24,11 +24,11 @@ const profileReducer = (state = initialState, action) => {
                     message: state.newPostText,
                     likes_count: 0,
                 };
-                //Создаем объект и копируем в него state, и возвращаем его
+                //Создаем объект и копируем в него state, и сразу же возвращаем его
                 return {
                     ...state,
                     newPostText: '',
-                    //Копируем пост и добавляем новое в конец
+                    //Копируем пост и добавляем новый в конец
                     posts: [...state.posts, newPost]
                 };
             }
@@ -37,7 +37,7 @@ const profileReducer = (state = initialState, action) => {
         case UPDATE_NEW_POST_TEXT:
             return {
                 ...state,
-                newPostText:action.newText,
+                newPostText: action.newText,
             };
         default:
             return state;

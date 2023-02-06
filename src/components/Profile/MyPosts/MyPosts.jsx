@@ -36,7 +36,7 @@ const MyPosts = (props) => {
                     </form>
                     <div className="post__board board-post">
                         <h4 className="board-post title-post">Мои посты:</h4>
-                        {postsElement}
+                        {props.posts.length === 0 ?  <p>Напишите свой первый пост!</p> : postsElement }
                     </div>
                 </div>
             </div>

@@ -5,104 +5,79 @@ let initialState = {
     dialogs: [
         {
             id: 1,
-            name: 'Dmitriy',
+            name: 'Дмитрий',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello'
+            message: 'Привет!'
         },
         {
             id: 2,
-            name: 'Sergey',
+            name: 'Сергей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
+            message: 'Как дела?'
         },
         {
             id: 3,
-            name: 'Katy',
+            name: 'Катя',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'пварв'
         },
         {
             id: 4,
-            name: 'Andrew',
+            name: 'Андрей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'укпук'
+        },
+        {
+            id: 1,
+            name: 'Дмитрий',
+            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
+            message: 'Привет!'
         },
         {
             id: 2,
-            name: 'Sergey',
+            name: 'Сергей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
+            message: 'Как дела?'
         },
         {
             id: 3,
-            name: 'Katy',
+            name: 'Катя',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'пварв'
         },
         {
             id: 4,
-            name: 'Andrew',
+            name: 'Андрей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'укпук'
+        },
+        {
+            id: 1,
+            name: 'Дмитрий',
+            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
+            message: 'Привет!'
         },
         {
             id: 2,
-            name: 'Sergey',
+            name: 'Сергей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
+            message: 'Как дела?'
         },
         {
             id: 3,
-            name: 'Katy',
+            name: 'Катя',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'пварв'
         },
         {
             id: 4,
-            name: 'Andrew',
+            name: 'Андрей',
             avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
+            message: 'укпук'
         },
-        {
-            id: 2,
-            name: 'Sergey',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
-        },
-        {
-            id: 3,
-            name: 'Katy',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
-        },
-        {
-            id: 4,
-            name: 'Andrew',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
-        },
-        {
-            id: 2,
-            name: 'Sergey',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello how are you'
-        },
-        {
-            id: 3,
-            name: 'Katy',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
-        },
-        {
-            id: 4,
-            name: 'Andrew',
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg',
-            message: 'hello ergerg'
-        },
-
     ],
     messages: [
-        {id: 1, message: 'Hello, how are you?'},
+        {id: 1, message: 'Привет, как дела?'},
         {id: 2, message: 'br!'},
         {id: 3, message: 'HAH!'},
     ],
@@ -124,7 +99,7 @@ const dialogsReducer = (state = initialState, action) => {
                     ...state,
                     newMessageText: '',
                     //Копируем сообщения и добавляем новое в конец
-                    messages: [...state.messages, newMessage]
+                    messages: [...state.messages, newMessage],
                 };
             }
             break;
@@ -137,7 +112,7 @@ const dialogsReducer = (state = initialState, action) => {
         default:
             return state;
     }
-    return state
+    return state;
 }
 
 export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
