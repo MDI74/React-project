@@ -109,6 +109,7 @@ let initialState = {
     newMessageText: '',
 }
 const dialogsReducer = (state = initialState, action) => {
+
     switch (action.type) {
         //Добавления постов на страницу
         case ADD_MESSAGE:
@@ -118,18 +119,21 @@ const dialogsReducer = (state = initialState, action) => {
                     //Получаем значение текста из state который обновляется при вводе любого символа в чате
                     message: state.newMessageText,
                 };
-                let stateCopy = {...state};
-                stateCopy.messagesData = [...state.messagesData]
-                stateCopy.messagesData.push(newMessage)
-                stateCopy.newMessageText = '';
-                return stateCopy;
+                //Создаем объект и копируем в него state, и возвращаем его
+                return {
+                    ...state,
+                    newMessageText: '',
+                    //Копируем сообщения и добавляем новое в конец
+                    messagesData: [...state.messagesData, newMessage]
+                };
             }
             break;
         //Обновление текста в textarea в чате
         case UPDATE_NEW_MESSAGE_TEXT:
-            let stateCopy = {...state};
-            stateCopy.newMessageText = action.newText;
-            return stateCopy;
+            return {
+                ...state,
+                newMessageText: action.newText,
+            };
         default:
             return state;
     }
