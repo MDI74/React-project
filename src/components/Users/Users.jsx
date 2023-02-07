@@ -1,42 +1,43 @@
 import React from "react";
 import "./Users.scss";
 import User from "./User/User";
+import axios from "axios";
 
-const Users = (props) => {
+class Users extends React.Component {
+    constructor(props) {
+        super(props);
 
-    if (props.users.length === 0) {
-        props.setUsers([{
-            id: 1,
-            friend: false,
-            fullName: 'Дмитрий',
-            status: 'HI!',
-            location: {city: 'Москва', country: 'Россия'},
-            avatar: 'https://pixelbox.ru/wp-content/uploads/2021/05/ava-vk-animal-91.jpg'
-        },
-        ])
+        //Подгружаем данные из api
+        if (this.props.users.length === 0) {
+            axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+                this.props.setUsers(response.data.items)
+            })
+        }
     }
 
-    let usersElement = props.users.map(user => <User addFriend={props.addFriend} delFriend={props.delFriend}
-                                                     key={user.id} id={user.id} friend={user.friend}
-                                                     fullName={user.fullName}
-                                                     status={user.status}
-                                                     city={user.location.city} country={user.location.country}
-                                                     avatar={user.avatar}/>);
-
-    return (
-        <section className="users">
-            <div className="users__container">
-                <div className="users__content">
-                    <div className="user__topmenu">
-                        <p className="users__title">Найти друзей</p>
-                    </div>
-                    <div className="users__item item-user">
-                        {usersElement}
+    render() {
+        let usersElement = this.props.users.map(user => <User addFriend={this.props.addFriend}
+                                                              delFriend={this.props.delFriend}
+                                                              key={user.id} id={user.id} follow={user.followed}
+                                                              name={user.name}
+                                                              status={user.status}
+            // city={user.location.city} country={user.location.country}
+                                                              photo={user.photos.small}/>);
+        return (
+            <section className="users">
+                <div className="users__container">
+                    <div className="users__content">
+                        <div className="user__topmenu">
+                            <p className="users__title">Найти друзей</p>
+                        </div>
+                        <div className="users__item item-user">
+                            {usersElement}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    )
+            </section>
+        )
+    }
 }
 
 export default Users;

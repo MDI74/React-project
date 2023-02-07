@@ -8,29 +8,29 @@ let initialState = {
 }
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-        //Функция добавления в друзья
+        //Функция добавления пользователя в друзья
         case ADD_FRIEND:
             return {
                 ...state,
                 users: state.users.map(user => {
                     if (user.id === action.userId) {
-                        return {...user, friend: true}
+                        return {...user, followed: true}
                     }
                     return user;
                 }),
             };
-        //Функция удаление из друзей
+        //Функция удаления пользователя из друзей
         case DEL_FRIEND:
             return {
                 ...state,
                 users: state.users.map(user => {
                     if (user.id === action.userId) {
-                        return {...user, friend: false};
+                        return {...user, followed: false};
                     }
                     return user;
                 }),
             };
-        //Функция для загрузки пользователей
+        //Функция для загрузки пользователей на страницу
         case SET_USERS:
             return {
                 ...state,
