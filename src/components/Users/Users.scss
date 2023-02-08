@@ -5,7 +5,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 600px;
   }
 
   &__title {
@@ -20,11 +20,34 @@
   }
 }
 
-.item-user {
+.pagination-user {
 
-  & > *:not(:last-child) {
-    margin-bottom: 5px;
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
   }
+
+  &__page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    padding: 6px 10px;
+    cursor: pointer;
+    background-color: $second-color;
+
+    &.active {
+      background-color: $first-color;
+      color: $second-color;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+
+
 }
 
 

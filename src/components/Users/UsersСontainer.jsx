@@ -1,11 +1,14 @@
 import {connect} from "react-redux";
 import Users from "./Users";
-import {addFriendAC, delFriendAC, setUsers} from "../../redux/Users-reducer";
+import {addFriendAC, delFriendAC, setCurrentPageAC, setTotalUsersCountAC, setUsersAC} from "../../redux/Users-reducer";
 
 //Функция для передачи state
 let mapStateToProps = (state) => {
     return {
         users: state.usersPage.users,
+        pageSize: state.usersPage.pageSize,
+        totalUsersCount: state.usersPage.totalUsersCount,
+        currentPage: state.usersPage.currentPage,
     }
 }
 //Функция для передачи dispatch
@@ -21,7 +24,15 @@ let mapDispatchToProps = (dispatch) => {
         },
         //Функция для загрузки пользователей
         setUsers: (users) => {
-            dispatch(setUsers(users));
+            dispatch(setUsersAC(users));
+        },
+        //Функция для изменения страницы
+        setCurrentPage: (currentPage) => {
+            dispatch(setCurrentPageAC(currentPage));
+        },
+        //Функция для изменения страницы
+        setTotalUsersCount: (totalUsersCount) => {
+            dispatch(setTotalUsersCountAC(totalUsersCount));
         }
     }
 }
