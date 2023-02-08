@@ -14,15 +14,16 @@ const User = (props) => {
             </NavLink>
             <div className="item-user__info">
                 <h4 className="item-user__fullname">{props.name}</h4>
-                <p>Город: {props.city}</p>
+                {/*<p>Город: {props.city}</p>*/}
                 <p className="item-user__status">{props.status} </p>
-                {props.follow
-                    ? <button onClick={() =>{props.delFriend(props.id)}} className="button button--friend">Удалить из
-                        друзей</button>
-                    : <button onClick={() => {props.addFriend(props.id)}} className="button button--friend">Добавить в
-                        друзья</button>}
             </div>
+            {props.follow
+                ? <button onClick={() =>{props.delFriend(props.id)}} className="button button--friend">Удалить из
+                    друзей</button>
+                : <button onClick={() => {props.addFriend(props.id)}} className="button button--friend">Добавить в
+                    друзья</button>}
         </div>
+
     )
 }
 
