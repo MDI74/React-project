@@ -13,11 +13,11 @@ let mapStateToProps = (state) => {
 //Функция для передачи dispatch
 let mapDispatchToProps = (dispatch) => {
     return {
-        //Функция для добавления постов на страницу profile
+        //Колбэк функция для добавления постов на страницу profile
         addPost: () => {
             dispatch(addPostAС());
         },
-        //Функция для обновления textarea при вводе текста
+        //Колбэк функция для обновления textarea при вводе текста
         updateNewPostText: (text) => {
             dispatch(updateNewPostAС(text));
         }

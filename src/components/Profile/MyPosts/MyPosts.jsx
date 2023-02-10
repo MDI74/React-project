@@ -1,6 +1,6 @@
 import React from "react";
 import "./MyPosts.scss";
-import Post from "./Post/Post"
+import Post from "./Post/Post";
 import "./../../Button/Buttons.scss";
 
 const MyPosts = (props) => {
@@ -16,7 +16,7 @@ const MyPosts = (props) => {
         props.addPost();
     }
 
-    //Функция для обновления textarea при вводе текста
+    //Функция для обновления textarea при вводе текста в пост
     const onPostChange = () => {
         let text = newPostElement.current.value;
         props.updateNewPostText(text);

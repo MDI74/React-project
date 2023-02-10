@@ -5,32 +5,33 @@ import User from "./User/User";
 const Users = (props) => {
 
     let usersElement = props.users.map(user => <User addFriend={props.addFriend}
-                                                          delFriend={props.delFriend}
-                                                          key={user.id} id={user.id} follow={user.followed}
-                                                          name={user.name}
-                                                          status={user.status}
+                                                     delFriend={props.delFriend}
+                                                     key={user.id} id={user.id} follow={user.followed}
+                                                     name={user.name}
+                                                     status={user.status}
         // city={user.location.city} country={user.location.country}
-                                                          photo={user.photos.small}/>);
+                                                     photo={user.photos.small}/>);
 
     //Считает количество страниц
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
+
     let pages = []
     for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i)
-
+        pages.push(i);
     }
+
     //Создаем карусель массива страниц
     let startPage = (props.currentPage - 5) < 0 ? 0 : props.currentPage - 5;
     let endPage = props.currentPage + 4;
     let currentPages = pages.slice(startPage, endPage);
 
-    //Создаем элемент со всеми страницами
+    //Создаем элемент со всеми страницами при нажатии на страницу добавляет класс active к ней
     let pagesElement = currentPages.map(page => <span
         className={props.currentPage === page ? "pagination-user__page active" : "pagination-user__page"}
-        onClick={(e) => props.onPageChanged(page)}>{page}</span>)
+        onClick={(e) => props.onPageChanged(page)}>{page}</span>);
 
-    //Кнопки для перелистывания страниц вперед, назад
+    //Кнопки для перелистывания страниц вперед/назад
     let nextPage = <span className="pagination-user__page"
                          onClick={(e) => props.onPageChanged(props.currentPage >= props.totalUsersCount ? props.currentPage : props.currentPage + 1)}> 🠆 </span>;
     let backPage = <span className="pagination-user__page"

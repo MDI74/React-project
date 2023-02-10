@@ -11,11 +11,11 @@ let mapStateToProps = (state) => {
 //Функция для передачи dispatch
 let mapDispatchToProps = (dispatch) => {
     return {
-        //Функция для добавления сообщений на страницу profile
+        //Колбэк функция для добавления сообщений на страницу profile
         addMessage: () => {
             dispatch(addMessageActionCreator());
         },
-        //Функция для обновления textarea при вводе текста
+        //Колбэк функция для обновления textarea при вводе текста
         updateNewMessageText: (text) => {
             dispatch(updateNewMessageCreator(text));
         }

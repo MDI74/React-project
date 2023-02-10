@@ -4,15 +4,15 @@ import "./../../Button/Buttons.scss";
 
 const FormMessage = (props) => {
 
-    //Создает ссылку на textarea
+    //Создает ссылку на textarea в чате
     let newMessageElement = React.createRef();
 
-    //Функция для добавления сообщений на страницу profile
+    //Функция для добавления сообщения в чат
     const onAddMessage = () => {
         props.addMessage();
     }
 
-    //Функция для обновления textarea при вводе текста
+    //Функция для обновления textarea при вводе текста в чате
     const onMessageChange = () => {
         let text = newMessageElement.current.value;
         props.updateNewMessageText(text);
