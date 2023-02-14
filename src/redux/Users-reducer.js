@@ -15,7 +15,7 @@ let initialState = {
 }
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-        //Функция добавления пользователя в друзья
+        //Функция добавления пользователей в друзья
         case ADD_FRIEND:
             return {
                 ...state,
@@ -26,7 +26,7 @@ const usersReducer = (state = initialState, action) => {
                     return user;
                 }),
             };
-        //Функция удаления пользователя из друзей
+        //Функция удаления пользователей из друзей
         case DEL_FRIEND:
             return {
                 ...state,
@@ -66,16 +66,16 @@ const usersReducer = (state = initialState, action) => {
     }
 }
 
-export const addFriendAC = (userId) => ({type: ADD_FRIEND, userId});
+export const addFriend = (userId) => ({type: ADD_FRIEND, userId});
 
-export const delFriendAC = (userId) => ({type: DEL_FRIEND, userId});
+export const delFriend = (userId) => ({type: DEL_FRIEND, userId});
 
-export const setUsersAC = (users) => ({type: SET_USERS, users});
+export const setUsers = (users) => ({type: SET_USERS, users});
 
-export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
 
-export const setTotalUsersCountAC = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount});
+export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount});
 
-export const toggleIsFetchingAC = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
+export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
 
 export default usersReducer;

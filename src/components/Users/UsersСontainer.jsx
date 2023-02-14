@@ -2,15 +2,15 @@ import React from "react";
 import Preloader from "../Preloader/Preloader";
 import {connect} from "react-redux";
 import {
-    addFriendAC, delFriendAC, setCurrentPageAC,
-    setTotalUsersCountAC, setUsersAC, toggleIsFetchingAC
+    addFriend, delFriend, setCurrentPage,
+    setTotalUsersCount, setUsers, toggleIsFetching
 } from "../../redux/Users-reducer";
 import axios from "axios";
 import Users from "./Users";
 
 class UsersСontainer extends React.Component {
 
-    //Вызывается после рендеринга компонента
+    //Вызывается после рендеринга компоненты
     componentDidMount() {
 
         if (this.props.users.length === 0) {
@@ -22,7 +22,7 @@ class UsersСontainer extends React.Component {
                 this.props.toggleIsFetching(false);
                 //Выводим пользователей на страницу
                 this.props.setUsers(response.data.items);
-                //Инициализируем количетсво пользователей
+                //Инициализируем количество пользователей
                 this.props.setTotalUsersCount(response.data.totalCount);
             })
         }
@@ -66,27 +66,27 @@ let mapDispatchToProps = (dispatch) => {
     return {
         //Колбэк функция для добавления друзей
         addFriend: (userId) => {
-            dispatch(addFriendAC(userId));
+            dispatch(addFriend(userId));
         },
         //Колбэк функция для удаления друзей
         delFriend: (userId) => {
-            dispatch(delFriendAC(userId));
+            dispatch(delFriend(userId));
         },
         //Колбэк функция для загрузки пользователей
         setUsers: (users) => {
-            dispatch(setUsersAC(users));
+            dispatch(setUsers(users));
         },
         //Колбэк функция для изменения страницы
         setCurrentPage: (currentPage) => {
-            dispatch(setCurrentPageAC(currentPage));
+            dispatch(setCurrentPage(currentPage));
         },
         //Колбэк функция для установки числа пользователей в переменную totalUsersCount страницы
         setTotalUsersCount: (totalUsersCount) => {
-            dispatch(setTotalUsersCountAC(totalUsersCount));
+            dispatch(setTotalUsersCount(totalUsersCount));
         },
         //Колбэк функция для вкл/выкл эффекта загрузки
         toggleIsFetching: (isFetching) => {
-            dispatch(toggleIsFetchingAC(isFetching));
+            dispatch(toggleIsFetching(isFetching));
         }
     }
 }
