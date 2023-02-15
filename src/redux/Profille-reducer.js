@@ -1,5 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const SET_USER_PROFILE = 'SET-USER-PROFILE';
+const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING";
 
 //Создаем state с данными по умолчанию
 let initialState = {
@@ -9,6 +11,7 @@ let initialState = {
         {id: 3, message: 'second', likes_count: 11},
     ],
     newPostText: '',
+    profile: '',
 }
 const profileReducer = (state = initialState, action) => {
 
@@ -39,14 +42,24 @@ const profileReducer = (state = initialState, action) => {
                 ...state,
                 newPostText: action.newText,
             };
+        case SET_USER_PROFILE:
+            return {
+                ...state,
+                profile: action.profile,
+            };
+        case TOGGLE_IS_FETCHING:
+            return {
+                ...state,
+                isFetching: action.isFetching,
+            }
         default:
             return state;
     }
 }
 
 export const addPost = () => ({type: ADD_POST});
-
-export const updateNewPostText = (text) =>
-    ({type: UPDATE_NEW_POST_TEXT, newText: text});
+export const updateNewPostText = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
+export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
 
 export default profileReducer;
