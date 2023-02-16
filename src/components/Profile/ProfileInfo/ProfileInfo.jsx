@@ -4,8 +4,9 @@ import Preloader from "../../Preloader/Preloader";
 import usersPhoto from "../../../images/users/usersPhoto.png";
 
 const ProfileInfo = (props) => {
-    if (!props.profile){
-        return <Preloader />
+    debugger
+    if (!props.profile) {
+        return <Preloader/>
     }
 
     return (

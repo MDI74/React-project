@@ -12,7 +12,6 @@ class UsersСontainer extends React.Component {
 
     //Вызывается после рендеринга компоненты
     componentDidMount() {
-
         if (this.props.users.length === 0) {
             //Включаем визуальный эффект загрузки
             this.props.toggleIsFetching(true);
@@ -61,6 +60,7 @@ let mapStateToProps = (state) => {
         isFetching: state.usersPage.isFetching
     }
 }
+
 //Функция для передачи dispatch
 let mapDispatchToProps = (dispatch) => {
     return {
@@ -90,8 +90,6 @@ let mapDispatchToProps = (dispatch) => {
         }
     }
 }
-
-
 
 //Создаем контейнерную компоненту с помощью react-redux
 export default connect(mapStateToProps, mapDispatchToProps)(UsersСontainer);

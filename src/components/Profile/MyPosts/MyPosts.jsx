@@ -6,7 +6,7 @@ import "./../../Button/Buttons.scss";
 const MyPosts = (props) => {
 
     let postsElement = props.posts.map(post => <Post key={post.id} id={post.id} message={post.message}
-                                                         likes={post.likes_count}/>);
+                                                     likes={post.likes_count}/>);
 
     //Создает ссылку на textarea
     let newPostElement = React.createRef();
@@ -36,7 +36,7 @@ const MyPosts = (props) => {
                     </form>
                     <div className="post__board board-post">
                         <h4 className="board-post title-post">Мои посты:</h4>
-                        {props.posts.length === 0 ?  <p>Напишите свой первый пост!</p> : postsElement }
+                        {props.posts.length === 0 ? <p>Напишите свой первый пост!</p> : postsElement}
                     </div>
                 </div>
             </div>

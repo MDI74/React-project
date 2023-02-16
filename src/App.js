@@ -20,7 +20,8 @@ const App = (props) => {
                 <Navigation/>
                 <main className="main">
                     <Routes>
-                        <Route path="profile/*" element={<ProfileContainer/>}/>
+                        <Route path="/profile" element={<ProfileContainer/>}/>
+                        <Route path="/profile/:profileId" element={<ProfileContainer/>}/>
                         <Route path="dialogs/*" element={<DialogsContainer/>}/>
                         <Route path="users" element={<UsersContainer/>}/>
                         <Route path="news" element={<News/>}/>
