@@ -6,9 +6,12 @@ import FormMessageContainer from "./FormMessage/FormMessageContainer";
 
 const Dialogs = (props) => {
 
+    //Список элементов пользователей в диалогах
     let dialogsElement = props.dialogs.map(dialog => <DialogItem key={dialog.id} id={dialog.id} name={dialog.name}
-                                                                     avatar={dialog.avatar} message={dialog.message}/>);
-    let messagesElement = props.messages.map(message => <Message key={message.id} id={message.id} message={message.message}/>);
+                                                                 avatar={dialog.avatar} message={dialog.message}/>);
+    //Список элементов сообщений в чате
+    let messagesElement = props.messages.map(message => <Message key={message.id} id={message.id}
+                                                                 message={message.message}/>);
 
     return (
         <section className="dialogs">

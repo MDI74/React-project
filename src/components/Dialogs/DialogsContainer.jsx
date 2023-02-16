@@ -8,12 +8,7 @@ let mapStateToProps = (state) => {
         messages: state.dialogsPage.messages
     }
 }
-//Функция для передачи dispatch
-let mapDispatchToProps = (dispatch) => {
-    return {}
-}
 
 //Создаем контейнерную компоненту с помощью react-redux
-
-const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
+const DialogsContainer = connect(mapStateToProps, {})(Dialogs);
 export default DialogsContainer;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./User.scss";
 import {NavLink} from "react-router-dom";
-import usersPhoto from "../../../images/usersPhoto.png";
+import usersPhoto from "../../../images/users/usersPhoto.png";
 
 const User = (props) => {
 
@@ -15,7 +15,7 @@ const User = (props) => {
             <div className="item-user__info">
                 <h4 className="item-user__fullname">{props.name}</h4>
                 {/*<p>Город: {props.city}</p>*/}
-                <p className="item-user__status">{props.status} </p>
+                <p className="item-user__status">{props.status}</p>
             </div>
             {props.follow
                 ? <button onClick={() =>{props.delFriend(props.id)}} className="button button--friend">Удалить из

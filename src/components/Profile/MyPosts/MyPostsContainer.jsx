@@ -1,4 +1,4 @@
-import {addPostAС, updateNewPostAС} from "../../../redux/Profille-reducer";
+import {addPost, updateNewPostText} from "../../../redux/Profille-reducer";
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 
@@ -10,20 +10,5 @@ let mapStateToProps = (state) => {
     }
 }
 
-//Функция для передачи dispatch
-let mapDispatchToProps = (dispatch) => {
-    return {
-        //Функция для добавления постов на страницу profile
-        addPost: () => {
-            dispatch(addPostAС());
-        },
-        //Функция для обновления textarea при вводе текста
-        updateNewPostText: (text) => {
-            dispatch(updateNewPostAС(text));
-        }
-    }
-}
-
-//Создаем контейнерную компоненту с помощью react-redux
-const MyPostsContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts);
-export default MyPostsContainer;
+//Создаем контейнерную компоненту с помощью react-redux, передаем туда mapStateToProps и объекты dispatch
+export default connect(mapStateToProps, {addPost, updateNewPostText,})(MyPosts);

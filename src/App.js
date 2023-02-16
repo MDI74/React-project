@@ -3,13 +3,13 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
-import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import Footer from "./components/Footer/Footer";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersСontainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 
 
 const App = (props) => {
@@ -20,7 +20,8 @@ const App = (props) => {
                 <Navigation/>
                 <main className="main">
                     <Routes>
-                        <Route path="profile/*" element={<Profile/>}/>
+                        <Route path="/profile" element={<ProfileContainer/>}/>
+                        <Route path="/profile/:profileId" element={<ProfileContainer/>}/>
                         <Route path="dialogs/*" element={<DialogsContainer/>}/>
                         <Route path="users" element={<UsersContainer/>}/>
                         <Route path="news" element={<News/>}/>

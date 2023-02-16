@@ -86,7 +86,7 @@ let initialState = {
 const dialogsReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        //Добавления постов на страницу
+        //Добавления сообщений в чат
         case ADD_MESSAGE:
             if (state.newMessageText) {
                 let newMessage = {
@@ -94,7 +94,7 @@ const dialogsReducer = (state = initialState, action) => {
                     //Получаем значение текста из state который обновляется при вводе любого символа в чате
                     message: state.newMessageText,
                 };
-                //Создаем объект и копируем в него state, и возвращаем его
+                //Создаем объект и копируем в него state, и сразу же  возвращаем его
                 return {
                     ...state,
                     newMessageText: '',
@@ -103,7 +103,7 @@ const dialogsReducer = (state = initialState, action) => {
                 };
             }
             break;
-        //Обновление текста в textarea в чате
+        //Обновление текста в textarea чата
         case UPDATE_NEW_MESSAGE_TEXT:
             return {
                 ...state,
@@ -115,9 +115,8 @@ const dialogsReducer = (state = initialState, action) => {
     return state;
 }
 
-export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
+export const addMessage = () => ({type: ADD_MESSAGE});
 
-export const updateNewMessageCreator = (text) =>
-    ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text});
+export const updateNewMessageText = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text});
 
 export default dialogsReducer;
