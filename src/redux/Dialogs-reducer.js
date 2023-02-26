@@ -82,7 +82,7 @@ let initialState = {
         {id: 3, message: 'HAH!'},
     ],
     newMessageText: '',
-}
+};
 const dialogsReducer = (state = initialState, action) => {
 
     switch (action.type) {

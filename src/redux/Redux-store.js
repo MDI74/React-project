@@ -3,6 +3,7 @@ import profileReducer from "./Profille-reducer";
 import dialogsReducer from "./Dialogs-reducer";
 import navigationReducer from "./Navigation-reducer";
 import usersReducer from "./Users-reducer";
+import authReducer from "./auth-reducer";
 
 //Собираем все reducers
 let reducers = combineReducers({
@@ -10,6 +11,7 @@ let reducers = combineReducers({
     dialogsPage: dialogsReducer,
     navigationPage: navigationReducer,
     usersPage: usersReducer,
+    auth: authReducer,
 });
 
 //Создаем redux store

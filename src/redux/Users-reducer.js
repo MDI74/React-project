@@ -12,7 +12,7 @@ let initialState = {
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: false,
-}
+};
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
         //Функция добавления пользователей в друзья

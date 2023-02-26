@@ -1,10 +1,10 @@
 import React from "react";
 import Profile from "./Profile";
 import axios from "axios";
-import {setUserProfile} from "../../redux/Profille-reducer";
+import {setUserProfile,toggleIsFetching} from "../../redux/Profille-reducer";
 import {connect} from "react-redux";
 import {useParams} from 'react-router-dom';
-import {toggleIsFetching} from "../../redux/Users-reducer";
+
 
 export function withRouter(Component) {
 
