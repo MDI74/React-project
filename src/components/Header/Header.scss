@@ -10,7 +10,13 @@
 
   &__content {
     display: flex;
+    justify-content: space-between;
     min-height: 70px;
+    align-items: center;
+  }
+
+  &__info{
+    display: flex;
     align-items: center;
   }
 

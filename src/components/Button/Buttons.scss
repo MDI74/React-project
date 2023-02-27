@@ -24,4 +24,13 @@
   &:hover {
     background-color: rgb(28, 69, 112);
   }
+
+  &--login {
+    color: $second-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.35;
+    padding: 5px 15px;
+  }
 }
+

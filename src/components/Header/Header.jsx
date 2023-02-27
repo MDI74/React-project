@@ -8,10 +8,12 @@ const Header = (props) => {
         <header className="header">
             <div className="header__container _container">
                 <div className="header__content">
-                    <a href="/profile" className="header__logo"><img src={logo} alt="Logo"/></a>
-                    <a href="/profile" className="header__title">Социальная сеть</a>
+                    <div className="header__info">
+                        <a href="/profile" className="header__logo"><img src={logo} alt="Logo"/></a>
+                        <a href="/profile" className="header__title">Социальная сеть</a>
+                    </div>
                     <div className="header__auth">
-                        {props.isAuth ? props.login : <NavLink to={'/profile'} className="login">Войти</NavLink>}
+                        {props.isAuth ? props.login : <NavLink to={'/profile'} className="button--login">Войти</NavLink>}
                     </div>
                 </div>
             </div>
