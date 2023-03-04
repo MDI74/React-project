@@ -16,13 +16,16 @@ class UsersСontainer extends React.Component {
             //Включаем визуальный эффект загрузки
             this.props.toggleIsFetching(true);
             //Подгружаем данные пользователей из api
-            axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
-                //Отключаем визуальный эффект загрузки
-                this.props.toggleIsFetching(false);
-                //Выводим пользователей на страницу
-                this.props.setUsers(response.data.items);
-                //Инициализируем количество пользователей
-                this.props.setTotalUsersCount(response.data.totalCount);
+            axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`, {
+                withCredentials: true
+            })
+                .then(response => {
+                    //Отключаем визуальный эффект загрузки
+                    this.props.toggleIsFetching(false);
+                    //Выводим пользователей на страницу
+                    this.props.setUsers(response.data.items);
+                    //Инициализируем количество пользователей
+                    this.props.setTotalUsersCount(response.data.totalCount);
             })
         }
     }
@@ -32,9 +35,12 @@ class UsersСontainer extends React.Component {
         //Устанавливаем значение текущей страницы
         this.props.setCurrentPage(page);
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`).then(response => {
-            this.props.toggleIsFetching(false);
-            this.props.setUsers(response.data.items);
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`, {
+            withCredentials: true
+        })
+            .then(response => {
+                this.props.toggleIsFetching(false);
+                this.props.setUsers(response.data.items);
         })
     }
 

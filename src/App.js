@@ -1,7 +1,6 @@
 import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import "./App.scss";
-import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";

@@ -2,6 +2,7 @@ import React from "react";
 import "./User.scss";
 import {NavLink} from "react-router-dom";
 import usersPhoto from "../../../images/users/usersPhoto.png";
+import axios from "axios";
 
 const User = (props) => {
 
@@ -18,10 +19,32 @@ const User = (props) => {
                 <p className="item-user__status">{props.status}</p>
             </div>
             {props.follow
-                ? <button onClick={() =>{props.delFriend(props.id)}} className="button button--friend">Удалить из
-                    друзей</button>
-                : <button onClick={() => {props.addFriend(props.id)}} className="button button--friend">Добавить в
-                    друзья</button>}
+                ? <button onClick={() =>{
+                    //Удаляем пользователя из друзей
+                    axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${props.id}`, {
+                        withCredentials: true,
+                        headers:{
+                            "API-kEY": "c464c4a7-5562-401c-9aef-d2f1673f18cf"
+                        }
+                    })
+                        .then(response => {
+                            if (response.data.resultCode === 0) {
+                                props.delFriend(props.id)
+                            }
+                        });
+
+                    }} className="button button--friend">Удалить из друзей</button>
+                : <button onClick={() => {
+                    //Добавляем в друзья пользователя
+                    axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${props.id}`, {}, {
+                        withCredentials: true
+                    })
+                        .then(response => {
+                            if (response.data.resultCode === 0) {
+                                props.addFriend(props.id)
+                            }
+                        });
+                    }} className="button button--friend">Добавить в друзья</button>}
         </div>
 
     )
