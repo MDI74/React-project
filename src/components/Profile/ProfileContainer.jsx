@@ -4,6 +4,7 @@ import axios from "axios";
 import {setUserProfile,toggleIsFetching} from "../../redux/Profille-reducer";
 import {connect} from "react-redux";
 import {useParams} from 'react-router-dom';
+import {profileAPI} from "../../api/api";
 
 
 export function withRouter(Component) {
@@ -26,11 +27,11 @@ class ProfileContainer extends React.Component {
         //Включаем визуальный эффект загрузки
         this.props.toggleIsFetching(true);
         //Подгружаем данные пользователей для профиля из api
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/` + profileId).then(response => {
+        profileAPI.getProfile(profileId).then(data => {
             //Отключаем визуальный эффект загрузки
             this.props.toggleIsFetching(false);
             //Выводим профиль пользователя на страницу на страницу
-            this.props.setUserProfile(response.data);
+            this.props.setUserProfile(data);
         })
     }
 

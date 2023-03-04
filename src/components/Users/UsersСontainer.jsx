@@ -5,27 +5,24 @@ import {
     addFriend, delFriend, setCurrentPage,
     setTotalUsersCount, setUsers, toggleIsFetching
 } from "../../redux/Users-reducer";
-import axios from "axios";
 import Users from "./Users";
+import {usersAPI} from "../../api/api";
 
-class UsersСontainer extends React.Component {
-
+class UsersContainer extends React.Component {
     //Вызывается после рендеринга компоненты
     componentDidMount() {
         if (this.props.users.length === 0) {
             //Включаем визуальный эффект загрузки
             this.props.toggleIsFetching(true);
+
             //Подгружаем данные пользователей из api
-            axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`, {
-                withCredentials: true
-            })
-                .then(response => {
-                    //Отключаем визуальный эффект загрузки
-                    this.props.toggleIsFetching(false);
-                    //Выводим пользователей на страницу
-                    this.props.setUsers(response.data.items);
-                    //Инициализируем количество пользователей
-                    this.props.setTotalUsersCount(response.data.totalCount);
+            usersAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
+                //Отключаем визуальный эффект загрузки
+                this.props.toggleIsFetching(false);
+                //Выводим пользователей на страницу
+                this.props.setUsers(data.items);
+                //Инициализируем количество пользователей
+                this.props.setTotalUsersCount(data.totalCount);
             })
         }
     }
@@ -35,12 +32,10 @@ class UsersСontainer extends React.Component {
         //Устанавливаем значение текущей страницы
         this.props.setCurrentPage(page);
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`, {
-            withCredentials: true
-        })
-            .then(response => {
-                this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
+
+        usersAPI.getUsers(page, this.props.pageSize).then(data => {
+            this.props.toggleIsFetching(false);
+            this.props.setUsers(data.items);
         })
     }
 
@@ -98,4 +93,4 @@ let mapDispatchToProps = (dispatch) => {
 }
 
 //Создаем контейнерную компоненту с помощью react-redux
-export default connect(mapStateToProps, mapDispatchToProps)(UsersСontainer);
+export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
